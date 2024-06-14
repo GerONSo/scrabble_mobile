@@ -21,6 +21,10 @@
 		1DA058C62C19DB4B00AF4C55 /* RoomsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058C52C19DB4B00AF4C55 /* RoomsResponse.swift */; };
 		1DA058C82C19E38200AF4C55 /* GetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058C72C19E38200AF4C55 /* GetRequest.swift */; };
 		1DA058CA2C1A238900AF4C55 /* RoomItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058C92C1A238900AF4C55 /* RoomItem.swift */; };
+		1DA058CE2C1B6DF300AF4C55 /* EditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058CD2C1B6DF300AF4C55 /* EditTextView.swift */; };
+		1DA058D02C1B79C500AF4C55 /* ButtonS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058CF2C1B79C500AF4C55 /* ButtonS.swift */; };
+		1DA058D22C1C6C3D00AF4C55 /* RoomsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058D12C1C6C3D00AF4C55 /* RoomsScreen.swift */; };
+		1DA058D42C1C6C8800AF4C55 /* RoomsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058D32C1C6C8800AF4C55 /* RoomsItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		1DA058C52C19DB4B00AF4C55 /* RoomsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsResponse.swift; sourceTree = "<group>"; };
 		1DA058C72C19E38200AF4C55 /* GetRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRequest.swift; sourceTree = "<group>"; };
 		1DA058C92C1A238900AF4C55 /* RoomItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomItem.swift; sourceTree = "<group>"; };
+		1DA058CD2C1B6DF300AF4C55 /* EditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextView.swift; sourceTree = "<group>"; };
+		1DA058CF2C1B79C500AF4C55 /* ButtonS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonS.swift; sourceTree = "<group>"; };
+		1DA058D12C1C6C3D00AF4C55 /* RoomsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsScreen.swift; sourceTree = "<group>"; };
+		1DA058D32C1C6C8800AF4C55 /* RoomsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +208,8 @@
 		1DA058A52C19C7C400AF4C55 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				1DA058D12C1C6C3D00AF4C55 /* RoomsScreen.swift */,
+				1DA058D32C1C6C8800AF4C55 /* RoomsItem.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -309,11 +319,29 @@
 		1DA058C02C19D4D700AF4C55 /* basic */ = {
 			isa = PBXGroup;
 			children = (
+				1DA058CC2C1B6DCA00AF4C55 /* network */,
+				1DA058CB2C1B6DBF00AF4C55 /* views */,
+			);
+			path = basic;
+			sourceTree = "<group>";
+		};
+		1DA058CB2C1B6DBF00AF4C55 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				1DA058CD2C1B6DF300AF4C55 /* EditTextView.swift */,
+				1DA058CF2C1B79C500AF4C55 /* ButtonS.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		1DA058CC2C1B6DCA00AF4C55 /* network */ = {
+			isa = PBXGroup;
+			children = (
 				1DA058C12C19D50300AF4C55 /* BaseApi.swift */,
 				1DA058C32C19D6BF00AF4C55 /* Result.swift */,
 				1DA058C72C19E38200AF4C55 /* GetRequest.swift */,
 			);
-			path = basic;
+			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,13 +476,17 @@
 			files = (
 				1DA058C42C19D6BF00AF4C55 /* Result.swift in Sources */,
 				1DA058792C19C6E700AF4C55 /* ContentView.swift in Sources */,
+				1DA058D02C1B79C500AF4C55 /* ButtonS.swift in Sources */,
 				1DA058CA2C1A238900AF4C55 /* RoomItem.swift in Sources */,
 				1DA058772C19C6E700AF4C55 /* scrabble_iosApp.swift in Sources */,
 				1DA058C62C19DB4B00AF4C55 /* RoomsResponse.swift in Sources */,
+				1DA058D42C1C6C8800AF4C55 /* RoomsItem.swift in Sources */,
 				1DA058C82C19E38200AF4C55 /* GetRequest.swift in Sources */,
 				1DA058BB2C19CC4700AF4C55 /* RoomsViewModel.swift in Sources */,
+				1DA058D22C1C6C3D00AF4C55 /* RoomsScreen.swift in Sources */,
 				1DA058C22C19D50300AF4C55 /* BaseApi.swift in Sources */,
 				1DA058BF2C19CFF800AF4C55 /* RoomsInteractor.swift in Sources */,
+				1DA058CE2C1B6DF300AF4C55 /* EditTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

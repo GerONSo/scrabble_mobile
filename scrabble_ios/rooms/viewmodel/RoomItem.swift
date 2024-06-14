@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RoomItem {
+struct RoomItem: Identifiable {
     var id: String
     var name: String
 }
