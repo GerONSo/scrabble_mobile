@@ -9,8 +9,8 @@ import Foundation
 import OSLog
 
 final class RoomsViewModel: ObservableObject {
-    let roomsInteractor = RoomsInteractor()
-    let logger = Logger()
+    private let roomsInteractor = RoomsInteractor()
+    private let logger = Logger()
     
     @Published var rooms: Array<RoomItem> = Array()
     
@@ -19,18 +19,22 @@ final class RoomsViewModel: ObservableObject {
     }
     
     func getRooms() {
-        roomsInteractor.getRooms(resultCompletion: { result in
-            switch (result) {
-            case .success(let response):
-                self.rooms = response.rooms.map({ item in
-                    RoomItem(id: item.id, name: item.name)
-                })
-                for i in self.rooms {
-                    print(i.id + " " + i.name)
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.roomsInteractor.getRooms(resultCompletion: { result in
+                switch (result) {
+                case .success(let response):
+                    DispatchQueue.main.async {
+                        self.rooms = response.rooms.map({ item in
+                            RoomItem(id: item.id, name: item.name)
+                        })
+                    }
+                    for i in self.rooms {
+                        print(i.id + " " + i.name)
+                    }
+                case .failure(let error):
+                    self.logger.error("\(error)")
                 }
-            case .failure(let error):
-                self.logger.error("\(error)")
-            }
-        })
+            })
+        }
     }
 }

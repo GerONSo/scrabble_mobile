@@ -1,14 +1,13 @@
 //
-//  ButtonS.swift
+//  ButtonM.swift
 //  scrabble_ios
 //
-//  Created by smgoncharov on 13.06.2024.
+//  Created by smgoncharov on 14.06.2024.
 //
 
 import SwiftUI
 
-struct ButtonS: View {
-    
+struct ButtonM: View {
     private let action: () -> Void
     private let text: String
     
@@ -20,9 +19,10 @@ struct ButtonS: View {
     
     var body: some View {
         Text(text)
-            .padding(EdgeInsets(top: 12, leading: 20, bottom: 12, trailing: 20))
+            .frame(width: UIScreen.main.bounds.size.width / 2)
+            .padding(EdgeInsets(top: 18, leading: 20, bottom: 18, trailing: 20))
             .foregroundColor(.white)
-            .font(.callout)
+            .font(.title3)
             .background {
                 ZStack {
                     RoundedRectangle(cornerRadius: 8)
@@ -38,5 +38,5 @@ struct ButtonS: View {
 }
 
 #Preview {
-    ButtonS(action: {}, text: "Aboba")
+    ButtonM(action: {}, text: "Aboba")
 }

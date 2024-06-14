@@ -13,39 +13,13 @@ struct RoomsScreen: View {
     var body: some View {
         VStack {
             Text("Rooms")
-                .bold()
+                .fontWeight(.heavy)
                 .font(.largeTitle)
+                .padding([.top])
             
-            
-            HStack {
-                Text("Have a private code?")
-                    .font(.title)
-                    .bold()
-                    .padding([.top], 15)
-                    .padding([.leading], 30)
-                Spacer()
-            }
-            HStack {
-                EditTextView(placeholder: "XXX123")
-                    .padding([.leading], 25)
-                ButtonS(action: {
-                    // TODO private join
-                }, text: "Join").padding([.trailing], 30)
-            }
-            HStack {
-                Text("Or use public ones")
-                    .font(.title)
-                    .bold()
-                    .padding([.top], 15)
-                    .padding([.leading], 30)
-                Spacer()
-            }
-            ForEach(viewModel.rooms) { roomItem in
-                RoomsItem(name: roomItem.name, action: {
-                    
-                }).padding([.leading, .trailing], 30)
-            }
+            TabView(rooms: viewModel.rooms)
             Spacer()
+            
         }
     }
 }
