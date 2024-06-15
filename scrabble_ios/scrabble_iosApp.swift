@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct scrabble_iosApp: App {
+    @AppStorage("log_status") var log_status: Bool = false
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if log_status {
+                ContentView()
+            } else {
+                Auth()
+            }
         }
     }
 }
