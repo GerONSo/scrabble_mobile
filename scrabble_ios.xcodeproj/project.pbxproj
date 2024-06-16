@@ -29,6 +29,14 @@
 		1DA058D82C1C7F3300AF4C55 /* JoinRoomsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058D72C1C7F3300AF4C55 /* JoinRoomsTab.swift */; };
 		1DA058DA2C1C809C00AF4C55 /* CreateRoomTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058D92C1C809C00AF4C55 /* CreateRoomTab.swift */; };
 		1DA058DC2C1C833D00AF4C55 /* ButtonM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058DB2C1C833D00AF4C55 /* ButtonM.swift */; };
+		1DA058DE2C1DE50C00AF4C55 /* RoomScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058DD2C1DE50C00AF4C55 /* RoomScreen.swift */; };
+		1DA058E02C1DE55B00AF4C55 /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058DF2C1DE55B00AF4C55 /* RoomViewModel.swift */; };
+		1DA058E22C1DE65900AF4C55 /* RoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058E12C1DE65900AF4C55 /* RoomInteractor.swift */; };
+		1DA058E42C1DEDA300AF4C55 /* RoomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058E32C1DEDA300AF4C55 /* RoomRequest.swift */; };
+		1DA058E62C1DEECD00AF4C55 /* RoomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058E52C1DEECD00AF4C55 /* RoomResponse.swift */; };
+		1DA058E82C1DF50D00AF4C55 /* UserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058E72C1DF50D00AF4C55 /* UserItem.swift */; };
+		1DA058EA2C1DF6C800AF4C55 /* UserItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058E92C1DF6C800AF4C55 /* UserItemView.swift */; };
+		1DA058EC2C1DFAE100AF4C55 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058EB2C1DFAE100AF4C55 /* Extensions.swift */; };
 		941F113A2C1DBC8E002BB999 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F11392C1DBC8E002BB999 /* UserInteractor.swift */; };
 		941F113C2C1DECCE002BB999 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113B2C1DECCE002BB999 /* AuthViewModel.swift */; };
 		941F113E2C1DEDAA002BB999 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113D2C1DEDAA002BB999 /* User.swift */; };
@@ -89,6 +97,14 @@
 		1DA058D72C1C7F3300AF4C55 /* JoinRoomsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomsTab.swift; sourceTree = "<group>"; };
 		1DA058D92C1C809C00AF4C55 /* CreateRoomTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomTab.swift; sourceTree = "<group>"; };
 		1DA058DB2C1C833D00AF4C55 /* ButtonM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonM.swift; sourceTree = "<group>"; };
+		1DA058DD2C1DE50C00AF4C55 /* RoomScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomScreen.swift; sourceTree = "<group>"; };
+		1DA058DF2C1DE55B00AF4C55 /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
+		1DA058E12C1DE65900AF4C55 /* RoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInteractor.swift; sourceTree = "<group>"; };
+		1DA058E32C1DEDA300AF4C55 /* RoomRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomRequest.swift; sourceTree = "<group>"; };
+		1DA058E52C1DEECD00AF4C55 /* RoomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomResponse.swift; sourceTree = "<group>"; };
+		1DA058E72C1DF50D00AF4C55 /* UserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItem.swift; sourceTree = "<group>"; };
+		1DA058E92C1DF6C800AF4C55 /* UserItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItemView.swift; sourceTree = "<group>"; };
+		1DA058EB2C1DFAE100AF4C55 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		941F11392C1DBC8E002BB999 /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
 		941F113B2C1DECCE002BB999 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		941F113D2C1DEDAA002BB999 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -555,10 +571,13 @@
 				1DA058BB2C19CC4700AF4C55 /* RoomsViewModel.swift in Sources */,
 				1DA058D22C1C6C3D00AF4C55 /* RoomsScreen.swift in Sources */,
 				1DA058C22C19D50300AF4C55 /* BaseApi.swift in Sources */,
+				1DA058EC2C1DFAE100AF4C55 /* Extensions.swift in Sources */,
 				941F113C2C1DECCE002BB999 /* AuthViewModel.swift in Sources */,
 				1DA058EC2C1DFAE100AF4C55 /* Extensions.swift in Sources */,
 				1DA058BF2C19CFF800AF4C55 /* RoomsInteractor.swift in Sources */,
 				1DA058CE2C1B6DF300AF4C55 /* EditTextView.swift in Sources */,
+				1DA058E82C1DF50D00AF4C55 /* UserItem.swift in Sources */,
+				1DA058E02C1DE55B00AF4C55 /* RoomViewModel.swift in Sources */,
 				94EEB11F2C1D9AAF00FBB856 /* Auth.swift in Sources */,
 				941F113E2C1DEDAA002BB999 /* User.swift in Sources */,
 				1DA058E82C1DF50D00AF4C55 /* UserItem.swift in Sources */,
