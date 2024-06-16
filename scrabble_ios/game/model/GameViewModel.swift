@@ -9,7 +9,6 @@ import Foundation
 import OSLog
 import SwiftUI
 
-
 enum GameState {
     case idle
     case running
@@ -36,6 +35,8 @@ final class GameViewModel {
     
     private var roomId: String?
     private var userId: String?
+    
+    var scores: [ScoreModel] = []
     
     private let logger = Logger()
     @AppStorage("log_status") var log_status: Bool = false
@@ -121,5 +122,22 @@ final class GameViewModel {
                 }
             })
         }
+    }
+    
+    
+    func scoreBoard() {
+        let roomId = UserDefaults.standard.string(forKey: "currentRoomId")!
+        gameInteractor.getScoreBoard(roomId: roomId, resultCompletion: { result in
+            switch (result) {
+            case .success(let response):
+                DispatchQueue.main.async {
+                    self.scores = response.scores.map({ score in
+                        ScoreModel(name: score.name, score: score.score)
+                    })
+                }
+            case .failure(let error):
+                self.logger.error("\(error)")
+            }
+        })
     }
 }

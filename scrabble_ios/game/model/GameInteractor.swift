@@ -46,4 +46,9 @@ class GameInteractor {
         let jwtToken = UserDefaults.standard.string(forKey: "jwtUser")!
         BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/unpause", requestData: request, authorizationToken: jwtToken, resultCompletion: resultCompletion)
     }
+    
+    func getScoreBoard(roomId: String, resultCompletion: @escaping (Result<ScoreModelResponse>) -> Void) {
+        let jwtToken = UserDefaults.standard.string(forKey: "jwtUser")!
+        BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/scoreboard", requestData: ScoreRequest(roomId: roomId), authorizationToken: jwtToken, resultCompletion: resultCompletion)
+    }
 }

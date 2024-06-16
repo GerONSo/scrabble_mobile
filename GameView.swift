@@ -13,6 +13,7 @@ struct GameView: View {
         LetterTile(id: UUID(), letter: "C", value: 3),
     ]
     @State private var unusedLetters: [LetterTile] = []
+    @State var shouldShowScore: Bool = false
     
     private var gameModel: GameViewModel
     
@@ -39,6 +40,8 @@ struct GameView: View {
                 }
                 Button(action: {
                     // Scoreboard action
+                    shouldShowScore.toggle()
+                    
                 }) {
                     HStack {
                         Image(systemName: "list.number")
@@ -99,6 +102,9 @@ struct GameView: View {
                 }
                 Button(action: {
                     // SendWordsAction
+                    
+                    // gets scoreboard
+                    gameModel.scoreBoard()
                 }) {
                     ZStack {
                         Color.green
@@ -113,6 +119,26 @@ struct GameView: View {
         }
         .onAppear {
             initializeSpecialTiles()
+        }
+        .sheet(isPresented: $shouldShowScore) {
+            Text("Scoreboard")
+                .bold()
+                .font(.title2)
+                .padding()
+            VStack {
+                ForEach(gameModel.scores, id: \.self) { userScore in
+                    HStack {
+                        Text(userScore.name)
+                            .font(.title3)
+                        Spacer()
+                        Text(userScore.score)
+                            .font(.title3)
+                            .bold()
+                    }
+                }
+            }
+            .padding()
+            Spacer()
         }
     }
     

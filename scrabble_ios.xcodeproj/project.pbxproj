@@ -55,6 +55,7 @@
 		941F113C2C1DECCE002BB999 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113B2C1DECCE002BB999 /* AuthViewModel.swift */; };
 		941F113E2C1DEDAA002BB999 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113D2C1DEDAA002BB999 /* User.swift */; };
 		941F11402C1E0C9A002BB999 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113F2C1E0C9A002BB999 /* RegistrationViewModel.swift */; };
+		9463BCDF2C1F9E220037A77F /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463BCDE2C1F9E220037A77F /* ScoreModel.swift */; };
 		94EEB11F2C1D9AAF00FBB856 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EEB11E2C1D9AAF00FBB856 /* Auth.swift */; };
 		94EEB1222C1D9E3900FBB856 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EEB1212C1D9E3900FBB856 /* ViewExtensions.swift */; };
 		94EEB1242C1DA0A100FBB856 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EEB1232C1DA0A100FBB856 /* Registration.swift */; };
@@ -129,6 +130,7 @@
 		941F113B2C1DECCE002BB999 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		941F113D2C1DEDAA002BB999 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		941F113F2C1E0C9A002BB999 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		9463BCDE2C1F9E220037A77F /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
 		94EEB11E2C1D9AAF00FBB856 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		94EEB1212C1D9E3900FBB856 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		94EEB1232C1DA0A100FBB856 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				09E3BAC12C1F86ED00BDD30F /* TileModels.swift */,
 				09E3BAC52C1F89FA00BDD30F /* PlayerModel.swift */,
 				09E3BAC92C1F8CF100BDD30F /* GameInteractor.swift */,
+				9463BCDE2C1F9E220037A77F /* ScoreModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				1DE98EC62C1F34DD000FDE8E /* LeaveRequest.swift in Sources */,
 				1DA058D82C1C7F3300AF4C55 /* JoinRoomsTab.swift in Sources */,
 				1DA058E42C1DEDA300AF4C55 /* RoomRequest.swift in Sources */,
+				9463BCDF2C1F9E220037A77F /* ScoreModel.swift in Sources */,
 				1DE98ECE2C1F479D000FDE8E /* JoinResponse.swift in Sources */,
 				1DA058D42C1C6C8800AF4C55 /* RoomsItem.swift in Sources */,
 				09E3BAC22C1F86ED00BDD30F /* TileModels.swift in Sources */,
