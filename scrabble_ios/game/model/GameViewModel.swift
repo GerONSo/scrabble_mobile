@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import OSLog
+import SwiftUI
+
 
 enum GameState {
     case idle
@@ -31,8 +34,15 @@ final class GameViewModel {
     
     private var gameState: GameState = .idle
     
-    //private let logger = Logger()
-    //@AppStorage("log_status") var log_status: Bool = false
+    private var roomId: String?
+    private var userId: String?
+    
+    private let logger = Logger()
+    @AppStorage("log_status") var log_status: Bool = false
+    
+    /*public var gameState: String {
+        
+    };*/
     
     init() {}
     
@@ -44,14 +54,21 @@ final class GameViewModel {
         self.unusedLetters = unusedLetters
     }
     
-    /*func startGame() {
+    func startGame() {
         guard player.isAdmin else { return }
-        DispatchQueue.global().async {
-            self.gameInteractor.startGame(resultCompletion: { result in
+        guard roomId != nil else {
+            return
+        }
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.gameInteractor.startGame(roomId: self.roomId!, userId: self.userId!, resultCompletion: { result in
                 switch (result) {
                 case .success(let response):
                     DispatchQueue.main.async {
-                        self.gameState = .running
+                        if (response.success == true) {
+                            self.gameState = .running
+                        } else {
+                            self.logger.error("Cannot start the game")
+                        }
                     }
                 case .failure(let error):
                     self.logger.error("\(error)")
@@ -62,12 +79,19 @@ final class GameViewModel {
     
     func pauseGame() {
         guard player.isAdmin else { return }
-        DispatchQueue.global().async {
-            self.gameInteractor.pauseGame(resultCompletion: { result in
+        guard roomId != nil else {
+            return
+        }
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.gameInteractor.pauseGame(roomId: self.roomId!, userId: self.userId!, resultCompletion: { result in
                 switch (result) {
                 case .success(let response):
                     DispatchQueue.main.async {
-                        self.gameState = .running
+                        if (response.success == true) {
+                            self.gameState = .paused
+                        } else {
+                            self.logger.error("Cannot pause the game")
+                        }
                     }
                 case .failure(let error):
                     self.logger.error("\(error)")
@@ -78,17 +102,24 @@ final class GameViewModel {
     
     func unpauseGame() {
         guard player.isAdmin else { return }
-        DispatchQueue.global().async {
-            self.gameInteractor.unpauseGame(resultCompletion: { result in
+        guard roomId != nil else {
+            return
+        }
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.gameInteractor.unpauseGame(roomId: self.roomId!, userId: self.userId!, resultCompletion: { result in
                 switch (result) {
                 case .success(let response):
                     DispatchQueue.main.async {
-                        self.gameState = .running
+                        if (response.success == true) {
+                            self.gameState = .running
+                        } else {
+                            self.logger.error("Cannot unpause the game")
+                        }
                     }
                 case .failure(let error):
                     self.logger.error("\(error)")
                 }
             })
         }
-    }*/
+    }
 }

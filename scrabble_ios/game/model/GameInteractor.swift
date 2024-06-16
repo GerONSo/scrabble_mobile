@@ -29,18 +29,21 @@ class GameInteractor {
         BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/create", requestData:request, authorizationToken: jwtToken, resultCompletion: resultCompletion)
     }*/
     
-    func startGame(requestData: Encodable?, resultCompletion: @escaping (Result<RegistrationResponse>) -> Void) {
+    func startGame(roomId: String, userId: String, resultCompletion: @escaping (Result<DefaultResponse>) -> Void) {
+        let request = LeaveRequest(userId: userId, roomId: roomId)
         let jwtToken = UserDefaults.standard.string(forKey: "jwtUser")!
-        BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/start", requestData: requestData, authorizationToken: jwtToken, resultCompletion: resultCompletion)
+        BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/start", requestData: request, authorizationToken: jwtToken, resultCompletion: resultCompletion)
     }
     
-    func pauseGame(requestData: Encodable?, resultCompletion: @escaping (Result<RegistrationResponse>) -> Void) {
+    func pauseGame(roomId: String, userId: String, resultCompletion: @escaping (Result<DefaultResponse>) -> Void) {
+        let request = LeaveRequest(userId: userId, roomId: roomId)
         let jwtToken = UserDefaults.standard.string(forKey: "jwtUser")!
-        BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/pause", requestData: requestData, authorizationToken: jwtToken, resultCompletion: resultCompletion)
+        BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/pause", requestData: request, authorizationToken: jwtToken, resultCompletion: resultCompletion)
     }
     
-    func unpauseGame(requestData: Encodable?, resultCompletion: @escaping (Result<RegistrationResponse>) -> Void) {
+    func unpauseGame(roomId: String, userId: String, resultCompletion: @escaping (Result<DefaultResponse>) -> Void) {
+        let request = LeaveRequest(userId: userId, roomId: roomId)
         let jwtToken = UserDefaults.standard.string(forKey: "jwtUser")!
-        BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/unpause", requestData: requestData, authorizationToken: jwtToken, resultCompletion: resultCompletion)
+        BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/unpause", requestData: request, authorizationToken: jwtToken, resultCompletion: resultCompletion)
     }
 }
