@@ -28,9 +28,6 @@ final class RoomsViewModel: ObservableObject {
                             RoomItem(id: item.id, name: item.name)
                         })
                     }
-                    for i in self.rooms {
-                        print(i.id + " " + i.name)
-                    }
                 case .failure(let error):
                     self.logger.error("\(error)")
                 }

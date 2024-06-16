@@ -17,7 +17,7 @@ struct RoomsScreen: View {
                 .font(.largeTitle)
                 .padding([.top])
             
-            TabView(rooms: viewModel.rooms)
+            CustomTabView(rooms: viewModel.rooms)
             Spacer()
             
         }

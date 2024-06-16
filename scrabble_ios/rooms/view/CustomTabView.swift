@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TabView: View {
+struct CustomTabView: View {
     @State var selected = Array<Bool>([true, false])
     private var rooms: Array<RoomItem>
     
@@ -56,5 +56,5 @@ struct TabView: View {
 }
 
 #Preview {
-    TabView(rooms: Array())
+    CustomTabView(rooms: Array())
 }
