@@ -34,7 +34,7 @@ struct CreateRoomTab: View {
             }
             ButtonM(action: {
                 
-            }, text: "Create")
+            }, text: "Create", width: UIScreen.main.bounds.size.width / 2)
             .padding([.top], 40)
         }
     }

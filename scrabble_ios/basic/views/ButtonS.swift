@@ -11,10 +11,12 @@ struct ButtonS: View {
     
     private let action: () -> Void
     private let text: String
+    private let buttonType: ButtonType
     
-    init(action: @escaping () -> Void, text: String) {
+    init(action: @escaping () -> Void, text: String, buttonType: ButtonType = .regular) {
         self.action = action
         self.text = text
+        self.buttonType = buttonType
     }
     
     
@@ -25,8 +27,14 @@ struct ButtonS: View {
             .font(.callout)
             .background {
                 ZStack {
+                    let color = switch(self.buttonType) {
+                    case .negative:
+                        UIColor(rgb: 0xA00000)
+                    case .regular:
+                        UIColor(.black)
+                    }
                     RoundedRectangle(cornerRadius: 8)
-                        .fill(.black)
+                        .fill(Color(color))
                         .padding(EdgeInsets(top: 4, leading: 4, bottom: 4, trailing: 4))
                     
                 }
@@ -35,8 +43,12 @@ struct ButtonS: View {
                 action()
             }
     }
+    
+    enum ButtonType {
+        case regular, negative
+    }
 }
 
 #Preview {
-    ButtonS(action: {}, text: "Aboba")
+    ButtonS(action: {}, text: "Aboba", buttonType: .regular)
 }
