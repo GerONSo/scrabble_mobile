@@ -38,6 +38,14 @@
 		1DA058E82C1DF50D00AF4C55 /* UserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058E72C1DF50D00AF4C55 /* UserItem.swift */; };
 		1DA058EA2C1DF6C800AF4C55 /* UserItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058E92C1DF6C800AF4C55 /* UserItemView.swift */; };
 		1DA058EC2C1DFAE100AF4C55 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058EB2C1DFAE100AF4C55 /* Extensions.swift */; };
+		1DE98EC62C1F34DD000FDE8E /* LeaveRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98EC52C1F34DD000FDE8E /* LeaveRequest.swift */; };
+		1DE98EC82C1F34E8000FDE8E /* LeaveResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98EC72C1F34E8000FDE8E /* LeaveResponse.swift */; };
+		1DE98ECA2C1F36E3000FDE8E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98EC92C1F36E3000FDE8E /* MainViewModel.swift */; };
+		1DE98ECC2C1F4791000FDE8E /* JoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98ECB2C1F4791000FDE8E /* JoinRequest.swift */; };
+		1DE98ECE2C1F479D000FDE8E /* JoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98ECD2C1F479D000FDE8E /* JoinResponse.swift */; };
+		1DE98ED02C1F47C4000FDE8E /* DefaultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98ECF2C1F47C4000FDE8E /* DefaultResponse.swift */; };
+		1DE98ED22C1F6BA3000FDE8E /* CreateRoomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98ED12C1F6BA3000FDE8E /* CreateRoomRequest.swift */; };
+		1DE98ED42C1F6BAD000FDE8E /* CreateRoomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98ED32C1F6BAD000FDE8E /* CreateRoomResponse.swift */; };
 		941F113A2C1DBC8E002BB999 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F11392C1DBC8E002BB999 /* UserInteractor.swift */; };
 		941F113C2C1DECCE002BB999 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113B2C1DECCE002BB999 /* AuthViewModel.swift */; };
 		941F113E2C1DEDAA002BB999 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113D2C1DEDAA002BB999 /* User.swift */; };
@@ -99,6 +107,14 @@
 		1DA058E72C1DF50D00AF4C55 /* UserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItem.swift; sourceTree = "<group>"; };
 		1DA058E92C1DF6C800AF4C55 /* UserItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItemView.swift; sourceTree = "<group>"; };
 		1DA058EB2C1DFAE100AF4C55 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1DE98EC52C1F34DD000FDE8E /* LeaveRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveRequest.swift; sourceTree = "<group>"; };
+		1DE98EC72C1F34E8000FDE8E /* LeaveResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveResponse.swift; sourceTree = "<group>"; };
+		1DE98EC92C1F36E3000FDE8E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		1DE98ECB2C1F4791000FDE8E /* JoinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequest.swift; sourceTree = "<group>"; };
+		1DE98ECD2C1F479D000FDE8E /* JoinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinResponse.swift; sourceTree = "<group>"; };
+		1DE98ECF2C1F47C4000FDE8E /* DefaultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponse.swift; sourceTree = "<group>"; };
+		1DE98ED12C1F6BA3000FDE8E /* CreateRoomRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomRequest.swift; sourceTree = "<group>"; };
+		1DE98ED32C1F6BAD000FDE8E /* CreateRoomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomResponse.swift; sourceTree = "<group>"; };
 		941F11392C1DBC8E002BB999 /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
 		941F113B2C1DECCE002BB999 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		941F113D2C1DEDAA002BB999 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -165,6 +181,7 @@
 				1DA058A02C19C72300AF4C55 /* authorization */,
 				1DA058762C19C6E700AF4C55 /* scrabble_iosApp.swift */,
 				1DA058782C19C6E700AF4C55 /* ContentView.swift */,
+				1DE98EC92C1F36E3000FDE8E /* MainViewModel.swift */,
 				1DA0587A2C19C6E800AF4C55 /* Assets.xcassets */,
 				1DA0587C2C19C6E800AF4C55 /* Preview Content */,
 			);
@@ -273,6 +290,10 @@
 			children = (
 				1DA058BE2C19CFF800AF4C55 /* RoomsInteractor.swift */,
 				1DA058C52C19DB4B00AF4C55 /* RoomsResponse.swift */,
+				1DE98ECB2C1F4791000FDE8E /* JoinRequest.swift */,
+				1DE98ECD2C1F479D000FDE8E /* JoinResponse.swift */,
+				1DE98ED12C1F6BA3000FDE8E /* CreateRoomRequest.swift */,
+				1DE98ED32C1F6BAD000FDE8E /* CreateRoomResponse.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -283,6 +304,8 @@
 				1DA058E12C1DE65900AF4C55 /* RoomInteractor.swift */,
 				1DA058E32C1DEDA300AF4C55 /* RoomRequest.swift */,
 				1DA058E52C1DEECD00AF4C55 /* RoomResponse.swift */,
+				1DE98EC52C1F34DD000FDE8E /* LeaveRequest.swift */,
+				1DE98EC72C1F34E8000FDE8E /* LeaveResponse.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -374,6 +397,7 @@
 				1DA058C12C19D50300AF4C55 /* BaseApi.swift */,
 				1DA058C32C19D6BF00AF4C55 /* Result.swift */,
 				1DA058C72C19E38200AF4C55 /* GetRequest.swift */,
+				1DE98ECF2C1F47C4000FDE8E /* DefaultResponse.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -539,6 +563,7 @@
 				1DA058792C19C6E700AF4C55 /* ContentView.swift in Sources */,
 				1DA058D02C1B79C500AF4C55 /* ButtonS.swift in Sources */,
 				1DA058CA2C1A238900AF4C55 /* RoomItem.swift in Sources */,
+				1DE98EC82C1F34E8000FDE8E /* LeaveResponse.swift in Sources */,
 				1DA058EA2C1DF6C800AF4C55 /* UserItemView.swift in Sources */,
 				1DA058D62C1C709800AF4C55 /* CustomTabView.swift in Sources */,
 				1DA058E62C1DEECD00AF4C55 /* RoomResponse.swift in Sources */,
@@ -546,14 +571,19 @@
 				1DA058DE2C1DE50C00AF4C55 /* RoomScreen.swift in Sources */,
 				1DA058E22C1DE65900AF4C55 /* RoomInteractor.swift in Sources */,
 				1DA058DA2C1C809C00AF4C55 /* CreateRoomTab.swift in Sources */,
+				1DE98ECA2C1F36E3000FDE8E /* MainViewModel.swift in Sources */,
 				1DA058C62C19DB4B00AF4C55 /* RoomsResponse.swift in Sources */,
 				94EEB1242C1DA0A100FBB856 /* Registration.swift in Sources */,
 				1DA058DC2C1C833D00AF4C55 /* ButtonM.swift in Sources */,
+				1DE98EC62C1F34DD000FDE8E /* LeaveRequest.swift in Sources */,
 				1DA058D82C1C7F3300AF4C55 /* JoinRoomsTab.swift in Sources */,
 				1DA058E42C1DEDA300AF4C55 /* RoomRequest.swift in Sources */,
+				1DE98ECE2C1F479D000FDE8E /* JoinResponse.swift in Sources */,
 				1DA058D42C1C6C8800AF4C55 /* RoomsItem.swift in Sources */,
+				1DE98ED42C1F6BAD000FDE8E /* CreateRoomResponse.swift in Sources */,
 				941F11402C1E0C9A002BB999 /* RegistrationViewModel.swift in Sources */,
 				94EEB1222C1D9E3900FBB856 /* ViewExtensions.swift in Sources */,
+				1DE98ED22C1F6BA3000FDE8E /* CreateRoomRequest.swift in Sources */,
 				1DA058C82C19E38200AF4C55 /* GetRequest.swift in Sources */,
 				1DA058BB2C19CC4700AF4C55 /* RoomsViewModel.swift in Sources */,
 				09E3BABD2C1F1BF800BDD30F /* GameView.swift in Sources */,
@@ -563,10 +593,12 @@
 				941F113C2C1DECCE002BB999 /* AuthViewModel.swift in Sources */,
 				1DA058EC2C1DFAE100AF4C55 /* Extensions.swift in Sources */,
 				1DA058BF2C19CFF800AF4C55 /* RoomsInteractor.swift in Sources */,
+				1DE98ECC2C1F4791000FDE8E /* JoinRequest.swift in Sources */,
 				1DA058CE2C1B6DF300AF4C55 /* EditTextView.swift in Sources */,
 				1DA058E82C1DF50D00AF4C55 /* UserItem.swift in Sources */,
 				1DA058E02C1DE55B00AF4C55 /* RoomViewModel.swift in Sources */,
 				94EEB11F2C1D9AAF00FBB856 /* Auth.swift in Sources */,
+				1DE98ED02C1F47C4000FDE8E /* DefaultResponse.swift in Sources */,
 				941F113E2C1DEDAA002BB999 /* User.swift in Sources */,
 				1DA058E82C1DF50D00AF4C55 /* UserItem.swift in Sources */,
 				1DA058E02C1DE55B00AF4C55 /* RoomViewModel.swift in Sources */,

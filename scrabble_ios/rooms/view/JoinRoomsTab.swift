@@ -10,9 +10,13 @@ import SwiftUI
 struct JoinRoomsTab: View {
     
     private var rooms: Array<RoomItem>
+    @ObservedObject var viewModel: RoomsViewModel
+    @ObservedObject var mainViewModel: MainViewModel
     
-    init(rooms: Array<RoomItem>) {
+    init(rooms: Array<RoomItem>, viewModel: RoomsViewModel, mainViewModel: MainViewModel) {
         self.rooms = rooms
+        self.viewModel = viewModel
+        self.mainViewModel = mainViewModel
     }
     
     var body: some View {
@@ -26,11 +30,18 @@ struct JoinRoomsTab: View {
                 Spacer()
             }
             HStack {
-                EditTextView(placeholder: "XXX123")
+                EditTextView(placeholder: "XXX123", text: $viewModel.inviteCodeText)
                     .padding([.leading], 25)
                 ButtonS(action: {
-                    // TODO private join
-                }, text: "Join").padding([.trailing], 30)
+                    let currentRoomId = UserDefaults.standard.string(forKey: "currentRoomId")
+                    if (currentRoomId == nil) {
+                        viewModel.join(roomId: nil, inviteCode: viewModel.inviteCodeText, switchTab: {
+                            mainViewModel.selectedTab = 1
+                        })
+                    }
+                }, text: "Join")
+                .padding([.trailing], 30)
+                .opacity(UserDefaults.standard.string(forKey: "currentRoomId") == nil ? 1 : 0.3)
             }
             HStack {
                 Text("Or use public ones")
@@ -42,13 +53,20 @@ struct JoinRoomsTab: View {
             }
             ForEach(rooms) { roomItem in
                 RoomsItem(name: roomItem.name, action: {
-                    
-                }).padding([.leading, .trailing], 30)
+                    let currentRoomId = UserDefaults.standard.string(forKey: "currentRoomId")
+                    if (currentRoomId == nil) {
+                        viewModel.join(roomId: roomItem.id, inviteCode: nil, switchTab: {
+                            mainViewModel.selectedTab = 1
+                        })
+                    }
+                })
+                .padding([.leading, .trailing], 30)
+                .opacity(UserDefaults.standard.string(forKey: "currentRoomId") == nil ? 1 : 0.3)
             }
         }
     }
 }
 
 #Preview {
-    JoinRoomsTab(rooms: Array())
+    JoinRoomsTab(rooms: Array(), viewModel: RoomsViewModel(), mainViewModel: MainViewModel())
 }

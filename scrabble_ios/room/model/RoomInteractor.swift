@@ -10,6 +10,13 @@ import Foundation
 class RoomInteractor {
     func getRoom(roomId: String, resultCompletion: @escaping (Result<RoomResponse>) -> Void) {
         let request = RoomRequest(roomId: roomId)
-        BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/get_users", requestData: request, authorizationToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4RDgwM0U1MS1CQTA3LTQ4OUYtOEQ4Ni04MUM1RjI5NTI1MDkifQ.PMVQBnBCwQNcH7IsevQpRruh64fC5ushST1WfPLFUxM", resultCompletion: resultCompletion)
+        let jwtToken = UserDefaults.standard.string(forKey: "jwtUser")!
+        BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/get_users", requestData: request, authorizationToken: jwtToken, resultCompletion: resultCompletion)
+    }
+    
+    func leave(roomId: String, userId: String, resultCompletion: @escaping (Result<DefaultResponse>) -> Void) {
+        let request = LeaveRequest(userId: userId, roomId: roomId)
+        let jwtToken = UserDefaults.standard.string(forKey: "jwtUser")!
+        BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/kick", requestData: request, authorizationToken: jwtToken, resultCompletion: resultCompletion)
     }
 }
