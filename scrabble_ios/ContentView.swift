@@ -8,23 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = MainViewModel()
     
     var body: some View {
-        TabView {
-            Text("Rooms")
+        TabView(selection: $viewModel.selectedTab) {
+            RoomsScreen(mainViewModel: viewModel)
                 .tabItem {
                     Text("Rooms")
                     Image(systemName: "house")
                         .renderingMode(.template)
                 }
+                .tag(0)
             
-            RoomScreen(roomId: "93806E20-3703-4CE3-83A9-02F9C07A994D")
+            RoomScreen(roomId: UserDefaults.standard.string(forKey: "currentRoomId"), mainViewModel: self.viewModel)
                 .tabItem {
                     Text("Game")
                     Image(systemName: "gamecontroller")
                         .renderingMode(.template)
                 }
                 .padding([.bottom], 20)
+                .tag(1)
             
             Text("Account")
                 .tabItem {
@@ -32,6 +35,7 @@ struct ContentView: View {
                     Image(systemName: "person.crop.circle")
                         .renderingMode(.template)
                 }
+                .tag(2)
             
         }.tint(.black)
     }

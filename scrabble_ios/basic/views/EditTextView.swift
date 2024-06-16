@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct EditTextView: View {
-    @State private var text: String = ""
+    private var text: Binding<String>
     private let placeholder: String
     
-    init(placeholder: String) {
+    init(placeholder: String, text: Binding<String>) {
+        self.text = text
         self.placeholder = placeholder
     }
     
     var body: some View {
-        TextField(placeholder, text: $text)
+        TextField(placeholder, text: text)
             .padding(EdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 15))
             .background {
                 ZStack {
@@ -30,6 +31,6 @@ struct EditTextView: View {
     }
 }
 
-#Preview {
-    EditTextView(placeholder: "XXX123")
-}
+//#Preview {
+//    EditTextView(placeholder: "XXX123")
+//}

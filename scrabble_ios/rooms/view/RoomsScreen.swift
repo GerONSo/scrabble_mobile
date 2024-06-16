@@ -9,6 +9,11 @@ import SwiftUI
 
 struct RoomsScreen: View {
     @ObservedObject var viewModel = RoomsViewModel()
+    @ObservedObject var mainViewModel: MainViewModel
+    
+    init(mainViewModel: MainViewModel) {
+        self.mainViewModel = mainViewModel
+    }
     
     var body: some View {
         VStack {
@@ -17,13 +22,13 @@ struct RoomsScreen: View {
                 .font(.largeTitle)
                 .padding([.top])
             
-            CustomTabView(rooms: viewModel.rooms)
+            CustomTabView(rooms: viewModel.rooms, viewModel: viewModel, mainViewModel: self.mainViewModel)
             Spacer()
             
         }
     }
 }
 
-#Preview {
-    RoomsScreen()
-}
+//#Preview {
+//    RoomsScreen()
+//}

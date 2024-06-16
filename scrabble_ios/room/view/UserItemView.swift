@@ -9,11 +9,15 @@ import SwiftUI
 
 struct UserItemView: View {
     private var userItem: UserItem
+    private var adminUserId: String
+    private let userId: String
     
     @State private var wasClicked = false
     
-    init(userItem: UserItem) {
+    init(userItem: UserItem, adminUserId: String) {
         self.userItem = userItem
+        self.adminUserId = adminUserId
+        self.userId = UserDefaults.standard.string(forKey: "userid")!
     }
     
     var body: some View {
@@ -21,13 +25,19 @@ struct UserItemView: View {
             HStack {
                 Text(self.userItem.name)
                 Spacer()
-                Text(self.userItem.description)
-                    .fontWeight(.thin)
-                    .onTapGesture {
-                        wasClicked = !wasClicked
-                    }
+                if (self.userId != self.adminUserId && userItem.description == "admin") {
+                    Text(self.userItem.description)
+                        .fontWeight(.thin)
+                } else if (self.userId == self.adminUserId) {
+                    Text(self.userItem.description)
+                        .fontWeight(.thin)
+                        .onTapGesture {
+                            wasClicked = !wasClicked
+                        }
+                }
+                
             }.padding([.horizontal], 30)
-            if (wasClicked && self.userItem.description != "admin") {
+            if (wasClicked && self.userItem.description != "admin" && self.userId == self.adminUserId) {
                 HStack {
                     Spacer()
                     ButtonS(action: {
@@ -40,6 +50,6 @@ struct UserItemView: View {
     }
 }
 
-#Preview {
-    UserItemView(userItem: UserItem(id: UUID().uuidString, name: "username", description: "admin"))
-}
+//#Preview {
+//    UserItemView(userItem: UserItem(id: UUID().uuidString, name: "username", description: "admin"), adminUserId: "")
+//}

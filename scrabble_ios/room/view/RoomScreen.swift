@@ -9,9 +9,11 @@ import SwiftUI
 
 struct RoomScreen: View {
     @ObservedObject var viewModel: RoomViewModel
+    @ObservedObject var mainViewModel: MainViewModel
     
-    init(roomId: String) {
+    init(roomId: String?, mainViewModel: MainViewModel) {
         self.viewModel = RoomViewModel(roomId: roomId)
+        self.mainViewModel = mainViewModel
     }
     
     var body: some View {
@@ -21,8 +23,8 @@ struct RoomScreen: View {
                 .font(.largeTitle)
                 .padding([.top])
             VStack {
-                ForEach(viewModel.users) { userItem in
-                    UserItemView(userItem: userItem)
+                ForEach($viewModel.users) { $userItem in
+                    UserItemView(userItem: userItem, adminUserId: $viewModel.adminUserId.wrappedValue)
                         .padding([.top], 15)
                 }
             }.padding([.top], 20)
@@ -33,7 +35,9 @@ struct RoomScreen: View {
                 }, text: "Delete room", buttonType: .negative, width: 170).padding([.leading], 30)
                 Spacer()
                 ButtonM(action: {
-                    
+                    viewModel.leaveRoom {
+                        mainViewModel.selectedTab = 0
+                    }
                 }, text: "Leave", buttonType: .regular, width: 170).padding([.trailing], 30)
             }
         }
@@ -41,5 +45,5 @@ struct RoomScreen: View {
 }
 
 #Preview {
-    RoomScreen(roomId: "93806E20-3703-4CE3-83A9-02F9C07A994D")
+    RoomScreen(roomId: "93806E20-3703-4CE3-83A9-02F9C07A994D", mainViewModel: MainViewModel())
 }
