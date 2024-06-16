@@ -45,6 +45,7 @@
 		1DE98ED02C1F47C4000FDE8E /* DefaultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98ECF2C1F47C4000FDE8E /* DefaultResponse.swift */; };
 		1DE98ED22C1F6BA3000FDE8E /* CreateRoomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98ED12C1F6BA3000FDE8E /* CreateRoomRequest.swift */; };
 		1DE98ED42C1F6BAD000FDE8E /* CreateRoomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98ED32C1F6BAD000FDE8E /* CreateRoomResponse.swift */; };
+		1DE98ED62C1F8B80000FDE8E /* DeleteRoomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98ED52C1F8B80000FDE8E /* DeleteRoomRequest.swift */; };
 		941F113A2C1DBC8E002BB999 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F11392C1DBC8E002BB999 /* UserInteractor.swift */; };
 		941F113C2C1DECCE002BB999 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113B2C1DECCE002BB999 /* AuthViewModel.swift */; };
 		941F113E2C1DEDAA002BB999 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113D2C1DEDAA002BB999 /* User.swift */; };
@@ -113,6 +114,7 @@
 		1DE98ECF2C1F47C4000FDE8E /* DefaultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponse.swift; sourceTree = "<group>"; };
 		1DE98ED12C1F6BA3000FDE8E /* CreateRoomRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomRequest.swift; sourceTree = "<group>"; };
 		1DE98ED32C1F6BAD000FDE8E /* CreateRoomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomResponse.swift; sourceTree = "<group>"; };
+		1DE98ED52C1F8B80000FDE8E /* DeleteRoomRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteRoomRequest.swift; sourceTree = "<group>"; };
 		941F11392C1DBC8E002BB999 /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
 		941F113B2C1DECCE002BB999 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		941F113D2C1DEDAA002BB999 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				1DA058E52C1DEECD00AF4C55 /* RoomResponse.swift */,
 				1DE98EC52C1F34DD000FDE8E /* LeaveRequest.swift */,
 				1DE98EC72C1F34E8000FDE8E /* LeaveResponse.swift */,
+				1DE98ED52C1F8B80000FDE8E /* DeleteRoomRequest.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 				1DA058D22C1C6C3D00AF4C55 /* RoomsScreen.swift in Sources */,
 				1DA058C22C19D50300AF4C55 /* BaseApi.swift in Sources */,
 				1DA058EC2C1DFAE100AF4C55 /* Extensions.swift in Sources */,
+				1DE98ED62C1F8B80000FDE8E /* DeleteRoomRequest.swift in Sources */,
 				941F113C2C1DECCE002BB999 /* AuthViewModel.swift in Sources */,
 				1DA058EC2C1DFAE100AF4C55 /* Extensions.swift in Sources */,
 				1DA058BF2C19CFF800AF4C55 /* RoomsInteractor.swift in Sources */,

@@ -44,9 +44,9 @@ final class RoomsViewModel: ObservableObject {
             switch (result) {
             case .success(let response):
                 DispatchQueue.main.async {
-                    if (response.success == true) {
+                    if (response.roomId != nil) {
                         switchTab()
-                        UserDefaults.standard.set(roomId, forKey: "currentRoomId")
+                        UserDefaults.standard.set(response.roomId, forKey: "currentRoomId")
                     } else {
                         self.logger.error("Cannot join room")
                     }

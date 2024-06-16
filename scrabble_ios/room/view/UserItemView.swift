@@ -11,13 +11,17 @@ struct UserItemView: View {
     private var userItem: UserItem
     private var adminUserId: String
     private let userId: String
+    private let kickAction: () -> Void
+    private let giveAdminAction: () -> Void
     
     @State private var wasClicked = false
     
-    init(userItem: UserItem, adminUserId: String) {
+    init(userItem: UserItem, adminUserId: String, kickAction: @escaping () -> Void, giveAdminAction: @escaping () -> Void) {
         self.userItem = userItem
         self.adminUserId = adminUserId
         self.userId = UserDefaults.standard.string(forKey: "userid")!
+        self.kickAction = kickAction
+        self.giveAdminAction = giveAdminAction
     }
     
     var body: some View {
@@ -41,7 +45,12 @@ struct UserItemView: View {
                 HStack {
                     Spacer()
                     ButtonS(action: {
-                        
+                        giveAdminAction()
+                    }, text: "Give admin", buttonType: .regular)
+                    .padding([.trailing], 15)
+                    
+                    ButtonS(action: {
+                        kickAction()
                     }, text: "Kick", buttonType: .negative)
                     .padding([.trailing], 25)
                 }

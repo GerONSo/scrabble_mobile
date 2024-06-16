@@ -13,7 +13,7 @@ class RoomsInteractor {
         BaseApi.makeRequest(httpMethod: "GET", endpoint: "rooms/all", authorizationToken: jwtToken, resultCompletion: resultCompletion)
     }
     
-    func join(userId: String, roomId: String?, inviteCode: String?, resultCompletion: @escaping (Result<DefaultResponse>) -> Void) {
+    func join(userId: String, roomId: String?, inviteCode: String?, resultCompletion: @escaping (Result<JoinResponse>) -> Void) {
         let jwtToken = UserDefaults.standard.string(forKey: "jwtUser")!
         let request = JoinRequest(userId: userId, roomId: roomId, inviteCode: inviteCode)
         BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/join", requestData: request, authorizationToken: jwtToken, resultCompletion: resultCompletion)

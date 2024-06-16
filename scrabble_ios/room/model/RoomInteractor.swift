@@ -19,4 +19,16 @@ class RoomInteractor {
         let jwtToken = UserDefaults.standard.string(forKey: "jwtUser")!
         BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/kick", requestData: request, authorizationToken: jwtToken, resultCompletion: resultCompletion)
     }
+    
+    func giveAdmin(roomId: String, userId: String, resultCompletion: @escaping (Result<DefaultResponse>) -> Void) {
+        let request = LeaveRequest(userId: userId, roomId: roomId)
+        let jwtToken = UserDefaults.standard.string(forKey: "jwtUser")!
+        BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/give_admin", requestData: request, authorizationToken: jwtToken, resultCompletion: resultCompletion)
+    }
+    
+    func deleteRoom(roomId: String, resultCompletion: @escaping (Result<DefaultResponse>) -> Void) {
+        let request = DeleteRoomRequest(roomId: roomId)
+        let jwtToken = UserDefaults.standard.string(forKey: "jwtUser")!
+        BaseApi.makeRequest(httpMethod: "POST", endpoint: "rooms/delete", requestData: request, authorizationToken: jwtToken, resultCompletion: resultCompletion)
+    }
 }

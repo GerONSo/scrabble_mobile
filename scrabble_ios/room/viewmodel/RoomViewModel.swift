@@ -75,4 +75,65 @@ final class RoomViewModel: ObservableObject {
             })
         }
     }
+    
+    func kick(kickUserId: String) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.roomInteractor.leave(roomId: self.roomId!, userId: kickUserId, resultCompletion: { result in
+                switch (result) {
+                case .success(let response):
+                    DispatchQueue.main.async {
+                        if (response.success == true) {
+                            self.getRoom()
+                        } else {
+                            self.logger.error("Cannot kick user")
+                        }
+                    }
+                case .failure(let error):
+                    self.logger.error("\(error)")
+                }
+            })
+        }
+    }
+    
+    func giveAdmin(userId: String) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.roomInteractor.giveAdmin(roomId: self.roomId!, userId: userId, resultCompletion: { result in
+                switch (result) {
+                case .success(let response):
+                    DispatchQueue.main.async {
+                        if (response.success == true) {
+                            self.getRoom()
+                        } else {
+                            self.logger.error("Cannot kick user")
+                        }
+                    }
+                case .failure(let error):
+                    self.logger.error("\(error)")
+                }
+            })
+        }
+    }
+    
+    func deleteRoom(switchTab: @escaping () -> Void) {
+        guard roomId != nil else {
+            return
+        }
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.roomInteractor.deleteRoom(roomId: self.roomId!, resultCompletion: { result in
+                switch (result) {
+                case .success(let response):
+                    DispatchQueue.main.async {
+                        if (response.success == true) {
+                            switchTab()
+                            UserDefaults.standard.set(nil, forKey: "currentRoomId")
+                        } else {
+                            self.logger.error("Cannot delete the room")
+                        }
+                    }
+                case .failure(let error):
+                    self.logger.error("\(error)")
+                }
+            })
+        }
+    }
 }
