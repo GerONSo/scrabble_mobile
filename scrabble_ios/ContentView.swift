@@ -20,7 +20,15 @@ struct ContentView: View {
                 }
                 .tag(0)
             
-            RoomScreen(roomId: UserDefaults.standard.string(forKey: "currentRoomId"), mainViewModel: self.viewModel)
+            /*RoomScreen(roomId: UserDefaults.standard.string(forKey: "currentRoomId"), mainViewModel: self.viewModel)
+                .tabItem {
+                    Text("Game")
+                    Image(systemName: "gamecontroller")
+                        .renderingMode(.template)
+                }
+                .padding([.bottom], 20)
+                .tag(1)*/
+            GameView()
                 .tabItem {
                     Text("Game")
                     Image(systemName: "gamecontroller")

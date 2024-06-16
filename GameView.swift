@@ -11,13 +11,32 @@ struct GameView: View {
         LetterTile(id: UUID(), letter: "U", value: 3),
         LetterTile(id: UUID(), letter: "K", value: 3),
         LetterTile(id: UUID(), letter: "C", value: 3),
-    ] // Example letters
+    ]
+    @State private var unusedLetters: [LetterTile] = []
+    
+    private var gameModel: GameViewModel
+    
+    init() {
+        gameModel = GameViewModel()
+    }
+    
+    init(gameModel_: GameViewModel) {
+        gameModel = gameModel_
+    }
     
     var body: some View {
         VStack {
             // Top Bar
             HStack {
                 Spacer()
+                Button(action: {
+                    // Scoreboard action
+                }) {
+                    HStack {
+                        Image(systemName: "play.fill")
+                        Text("Start")
+                    }
+                }
                 Button(action: {
                     // Scoreboard action
                 }) {
@@ -78,6 +97,16 @@ struct GameView: View {
                             return NSItemProvider()
                         }
                 }
+                Button(action: {
+                    // SendWordsAction
+                }) {
+                    ZStack {
+                        Color.green
+                        Image(systemName: "hand.thumbsup.fill")
+                    }
+                    .frame(width: 40, height: 40)
+                    .clipShape(.rect(cornerRadius: 10))
+                }
             }
             .padding()
             .background(Color(UIColor.lightGray))
@@ -129,69 +158,8 @@ struct GameView: View {
     }
 }
 
-struct BoardTile {
-    var letter: String?
-    var multiplier: MultiplierType
-    
-    enum MultiplierType: Codable {
-        case empty, TW, DW, DL, TL
-    }
-}
-
-struct LetterTile: Identifiable, Codable {
-    let id: UUID
-    let letter: String
-    let value: Int
-}
-
-struct TileView: View {
-    var tile: BoardTile
-    
-    var body: some View {
-        ZStack {
-            switch tile.multiplier {
-            case .TW:
-                Color.red
-                if tile.letter == nil { Text("TW").foregroundColor(.white) }
-            case .DW:
-                Color.blue
-                if tile.letter == nil { Text("DW").foregroundColor(.white) }
-            case .DL:
-                Color.green
-                if tile.letter == nil { Text("DL").foregroundColor(.white) }
-            case .TL:
-                Color.yellow
-                if tile.letter == nil { Text("TL").foregroundColor(.white) }
-            case .empty:
-                Color.white
-            }
-            
-            if let letter = tile.letter {
-                Text(letter)
-                    .font(.headline)
-                    .foregroundColor(.black)
-            }
-        }
-    }
-}
-
-struct LetterTileView: View {
-    var letterTile: LetterTile
-    
-    var body: some View {
-        ZStack {
-            Color.white
-            Text(letterTile.letter)
-                .font(.largeTitle)
-                .foregroundColor(.black)
-        }
-        .frame(width: 40, height: 40)
-        .border(Color.black, width: 2)
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView(gameModel_: GameViewModel())
     }
 }
