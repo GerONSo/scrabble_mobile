@@ -2,8 +2,12 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 struct GameView: View {
-    @State private var remainingLetters: Int = 100 // Example initial count
+    /* // Example initial count
     @State private var board: [[BoardTile]] = Array(repeating: Array(repeating: BoardTile(letter: nil, multiplier: .empty), count: 15), count: 15)
+    @State private var unusedLetters: [LetterTile] = []*/
+    
+    @State private var board: [[BoardTile]] = Array(repeating: Array(repeating: BoardTile(letter: nil, multiplier: .empty), count: 15), count: 15)
+    
     @State private var userLetters: [LetterTile] = [
         LetterTile(id: UUID(), letter: "F", value: 1),
         LetterTile(id: UUID(), letter: "L", value: 3),
@@ -12,7 +16,8 @@ struct GameView: View {
         LetterTile(id: UUID(), letter: "K", value: 3),
         LetterTile(id: UUID(), letter: "C", value: 3),
     ]
-    @State private var unusedLetters: [LetterTile] = []
+    
+    @State private var remainingLetters: Int = 100 // Example initial count
     
     private var gameModel: GameViewModel
     
@@ -29,14 +34,22 @@ struct GameView: View {
             // Top Bar
             HStack {
                 Spacer()
-                Button(action: {
-                    // Scoreboard action
-                }) {
+                if (gameModel.player.isAdmin) {
+                    Button(action: {
+                        // Scoreboard action
+                    }) {
+                        HStack {
+                            gameModel.pauseIcon
+                            Text(gameModel.pauseText)
+                        }
+                    }
+                } else {
                     HStack {
-                        Image(systemName: "play.fill")
-                        Text("Start")
+                        gameModel.pauseIcon
+                        Text(gameModel.pauseText)
                     }
                 }
+                
                 Button(action: {
                     // Scoreboard action
                 }) {
@@ -119,19 +132,19 @@ struct GameView: View {
     private func initializeSpecialTiles() {
         // Initialize special tiles (TW, DW, DL, TL) on the board
         let specialTiles: [(Int, Int, BoardTile.MultiplierType)] = [
-            (0, 0, .TW), (0, 7, .TW), (0, 14, .TW), (7, 0, .TW), (7, 14, .TW), (14, 0, .TW), (14, 7, .TW), (14, 14, .TW),
-            (1, 1, .DW), (2, 2, .DW), (3, 3, .DW), (4, 4, .DW), (10, 10, .DW), (11, 11, .DW), (12, 12, .DW), (13, 13, .DW),
-            (1, 13, .DW), (2, 12, .DW), (3, 11, .DW), (4, 10, .DW), (10, 4, .DW), (11, 3, .DW), (12, 2, .DW), (13, 1, .DW),
-            (5, 1, .TL), (9, 1, .TL), (1, 5, .TL), (1, 9, .TL), (5, 5, .TL), (9, 5, .TL), (5, 9, .TL), (9, 9, .TL),
-            (13, 5, .TL), (13, 9, .TL), (5, 13, .TL), (9, 13, .TL), (3, 0, .DL), (11, 0, .DL), (6, 2, .DL), (8, 2, .DL),
-            (0, 3, .DL), (0, 11, .DL), (2, 6, .DL), (2, 8, .DL), (6, 6, .DL), (6, 8, .DL), (8, 6, .DL), (8, 8, .DL),
-            (3, 14, .DL), (11, 14, .DL), (14, 3, .DL), (14, 11, .DL), (2, 12, .DL), (12, 2, .DL), (3, 11, .DL), (11, 3, .DL)
+            (0, 0, .TW), (0, 7, .TW), (0, 14, .TW), (7, 0, .TW), (7, 14, .TW), (14,0, .TW), (14, 7, .TW), (14, 14, .TW),
+            (1, 1, .DW), (2, 2, .DW), (3, 3, .DW), (4, 4, .DW), (10, 10, .DW), (11,11, .DW), (12, 12, .DW), (13, 13, .DW),
+            (1, 13, .DW), (2, 12, .DW), (3, 11, .DW), (4, 10, .DW), (10, 4, .DW),(11, 3, .DW), (12, 2, .DW), (13, 1, .DW),
+            (5, 1, .TL), (9, 1, .TL), (1, 5, .TL), (1, 9, .TL), (5, 5, .TL), (9, 5,.TL), (5, 9, .TL), (9, 9, .TL),
+            (13, 5, .TL), (13, 9, .TL), (5, 13, .TL), (9, 13, .TL), (3, 0, .DL), (11,0, .DL), (6, 2, .DL), (8, 2, .DL),
+            (0, 3, .DL), (0, 11, .DL), (2, 6, .DL), (2, 8, .DL), (6, 6, .DL), (6, 8,.DL), (8, 6, .DL), (8, 8, .DL),
+            (3, 14, .DL), (11, 14, .DL), (14, 3, .DL), (14, 11, .DL), (2, 12, .DL),(12, 2, .DL), (3, 11, .DL), (11, 3, .DL)
         ]
-        
         for (row, column, multiplier) in specialTiles {
             board[row][column].multiplier = multiplier
         }
     }
+    
     
     private func handleDrop(providers: [NSItemProvider], row: Int, column: Int) -> Bool {
         if let provider = providers.first {
