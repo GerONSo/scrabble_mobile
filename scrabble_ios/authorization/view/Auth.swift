@@ -6,62 +6,64 @@ struct Auth: View {
     @ObservedObject var authViewModel: AuthViewModel = .init()
     var body: some View {
         NavigationView {
-            VStack(spacing: 150) {
-                Text ("Welcome to Scrabble")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .lineLimit(3)
-                    .frame(width: 180)
-                    .multilineTextAlignment(.center)
-                    .padding(.top)
-                
-                VStack {
-                    TextField("Login", text: $authViewModel.userLogin)
-                        .bold()
-                        .autocapitalization(.none)
-                        .disableAutocorrection(true)
-                        .padding()
-                        .background(content: {
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(.black)
-                        })
-                        .padding(.horizontal)
+            ZStack {
+                VStack(spacing: 150) {
+                    Text ("Welcome to Scrabble")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .lineLimit(3)
+                        .frame(width: 180)
+                        .multilineTextAlignment(.center)
+                        .padding(.top, 30)
                     
-                    SecureInputView("Password", text: $authViewModel.userPassword)
-                        .bold()
-                        .padding()
-                        .background(content: {
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(.black)
-                        })
-                        .padding(.horizontal)
-                        .padding(.bottom)
-                    Button(action: {
-                        authViewModel.login()
-                        authViewModel.clearFields()
-                    }, label: {
-                        Text("Login")
-                            .foregroundStyle(.background)
-                            .padding(.horizontal, 50)
-                            .padding(.vertical, 10)
+                    VStack {
+                        TextField("Login", text: $authViewModel.userLogin)
+                            .bold()
+                            .autocapitalization(.none)
+                            .disableAutocorrection(true)
+                            .padding()
                             .background(content: {
                                 RoundedRectangle(cornerRadius: 10)
-                                    .fill(.primary)
+                                    .stroke(.black)
                             })
+                            .padding(.horizontal)
                         
-                    })
-                    .foregroundStyle(.primary)
-                    .font(.title3)
-                    
-                    NavigationLink(destination: Registration()) {
-                        Text("Don't have an account? Register now")
-                            .underline()
+                        SecureInputView("Password", text: $authViewModel.userPassword)
+                            .bold()
+                            .padding()
+                            .background(content: {
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.black)
+                            })
+                            .padding(.horizontal)
+                            .padding(.bottom)
+                        Button(action: {
+                            authViewModel.login()
+                            authViewModel.clearFields()
+                        }, label: {
+                            Text("Login")
+                                .foregroundStyle(.background)
+                                .padding(.horizontal, 50)
+                                .padding(.vertical, 10)
+                                .background(content: {
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .fill(.primary)
+                                })
+                            
+                        })
+                        .foregroundStyle(.primary)
+                        .font(.title3)
+                        
+                        NavigationLink(destination: Registration()) {
+                            Text("Don't have an account? Register now")
+                                .underline()
+                        }
+                        .padding()
+                        .foregroundStyle(.secondary)
+                        
+                        Spacer()
                     }
-                    .padding()
-                    .foregroundStyle(.secondary)
-                    
                 }
-                Spacer()
             }
         }
     }

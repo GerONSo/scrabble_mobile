@@ -33,6 +33,11 @@
 		941F113C2C1DECCE002BB999 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113B2C1DECCE002BB999 /* AuthViewModel.swift */; };
 		941F113E2C1DEDAA002BB999 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113D2C1DEDAA002BB999 /* User.swift */; };
 		941F11402C1E0C9A002BB999 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113F2C1E0C9A002BB999 /* RegistrationViewModel.swift */; };
+		941F11432C1E16B4002BB999 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F11422C1E16B4002BB999 /* Account.swift */; };
+		9463BCD52C1F22A40037A77F /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463BCD42C1F22A40037A77F /* ProfileInteractor.swift */; };
+		9463BCD72C1F4CEE0037A77F /* DefaultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463BCD62C1F4CEE0037A77F /* DefaultResponse.swift */; };
+		9463BCDB2C1F4E200037A77F /* Vapor in Frameworks */ = {isa = PBXBuildFile; productRef = 9463BCDA2C1F4E200037A77F /* Vapor */; };
+		9463BCDD2C1F59900037A77F /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463BCDC2C1F59900037A77F /* ProfileViewModel.swift */; };
 		94EEB11F2C1D9AAF00FBB856 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EEB11E2C1D9AAF00FBB856 /* Auth.swift */; };
 		94EEB1222C1D9E3900FBB856 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EEB1212C1D9E3900FBB856 /* ViewExtensions.swift */; };
 		94EEB1242C1DA0A100FBB856 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EEB1232C1DA0A100FBB856 /* Registration.swift */; };
@@ -85,6 +90,10 @@
 		941F113B2C1DECCE002BB999 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		941F113D2C1DEDAA002BB999 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		941F113F2C1E0C9A002BB999 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		941F11422C1E16B4002BB999 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Account.swift; path = scrabble_ios/account/Account.swift; sourceTree = SOURCE_ROOT; };
+		9463BCD42C1F22A40037A77F /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileInteractor.swift; path = scrabble_ios/account/ProfileInteractor.swift; sourceTree = SOURCE_ROOT; };
+		9463BCD62C1F4CEE0037A77F /* DefaultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DefaultResponse.swift; path = scrabble_ios/account/DefaultResponse.swift; sourceTree = SOURCE_ROOT; };
+		9463BCDC2C1F59900037A77F /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewModel.swift; path = scrabble_ios/account/ProfileViewModel.swift; sourceTree = SOURCE_ROOT; };
 		94EEB11E2C1D9AAF00FBB856 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		94EEB1212C1D9E3900FBB856 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		94EEB1232C1DA0A100FBB856 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
@@ -95,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9463BCDB2C1F4E200037A77F /* Vapor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,10 +191,9 @@
 		1DA058A02C19C72300AF4C55 /* authorization */ = {
 			isa = PBXGroup;
 			children = (
+				941F11412C1E168F002BB999 /* ViewModel */,
 				941F11382C1DBC72002BB999 /* model */,
 				94EEB1252C1DA3C500FBB856 /* view */,
-				941F113B2C1DECCE002BB999 /* AuthViewModel.swift */,
-				941F113F2C1E0C9A002BB999 /* RegistrationViewModel.swift */,
 			);
 			path = authorization;
 			sourceTree = "<group>";
@@ -304,6 +313,7 @@
 		1DA058AE2C19C83100AF4C55 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				941F11422C1E16B4002BB999 /* Account.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -311,6 +321,7 @@
 		1DA058AF2C19C83500AF4C55 /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
+				9463BCDC2C1F59900037A77F /* ProfileViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -318,6 +329,8 @@
 		1DA058B02C19C83E00AF4C55 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				9463BCD42C1F22A40037A77F /* ProfileInteractor.swift */,
+				9463BCD62C1F4CEE0037A77F /* DefaultResponse.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -360,6 +373,15 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		941F11412C1E168F002BB999 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				941F113B2C1DECCE002BB999 /* AuthViewModel.swift */,
+				941F113F2C1E0C9A002BB999 /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		94EEB1202C1D9E2A00FBB856 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +415,9 @@
 			dependencies = (
 			);
 			name = scrabble_ios;
+			packageProductDependencies = (
+				9463BCDA2C1F4E200037A77F /* Vapor */,
+			);
 			productName = scrabble_ios;
 			productReference = 1DA058732C19C6E700AF4C55 /* scrabble_ios.app */;
 			productType = "com.apple.product-type.application";
@@ -465,6 +490,10 @@
 				Base,
 			);
 			mainGroup = 1DA0586A2C19C6E700AF4C55;
+			packageReferences = (
+				9463BCD82C1F4D180037A77F /* XCRemoteSwiftPackageReference "bcrypt" */,
+				9463BCD92C1F4E200037A77F /* XCRemoteSwiftPackageReference "vapor" */,
+			);
 			productRefGroup = 1DA058742C19C6E700AF4C55 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -513,10 +542,12 @@
 				1DA058D02C1B79C500AF4C55 /* ButtonS.swift in Sources */,
 				1DA058CA2C1A238900AF4C55 /* RoomItem.swift in Sources */,
 				1DA058D62C1C709800AF4C55 /* TabView.swift in Sources */,
+				9463BCDD2C1F59900037A77F /* ProfileViewModel.swift in Sources */,
 				1DA058772C19C6E700AF4C55 /* scrabble_iosApp.swift in Sources */,
 				1DA058DA2C1C809C00AF4C55 /* CreateRoomTab.swift in Sources */,
 				1DA058C62C19DB4B00AF4C55 /* RoomsResponse.swift in Sources */,
 				94EEB1242C1DA0A100FBB856 /* Registration.swift in Sources */,
+				9463BCD52C1F22A40037A77F /* ProfileInteractor.swift in Sources */,
 				1DA058DC2C1C833D00AF4C55 /* ButtonM.swift in Sources */,
 				1DA058D82C1C7F3300AF4C55 /* JoinRoomsTab.swift in Sources */,
 				1DA058D42C1C6C8800AF4C55 /* RoomsItem.swift in Sources */,
@@ -527,6 +558,8 @@
 				1DA058D22C1C6C3D00AF4C55 /* RoomsScreen.swift in Sources */,
 				1DA058C22C19D50300AF4C55 /* BaseApi.swift in Sources */,
 				941F113C2C1DECCE002BB999 /* AuthViewModel.swift in Sources */,
+				941F11432C1E16B4002BB999 /* Account.swift in Sources */,
+				9463BCD72C1F4CEE0037A77F /* DefaultResponse.swift in Sources */,
 				1DA058BF2C19CFF800AF4C55 /* RoomsInteractor.swift in Sources */,
 				1DA058CE2C1B6DF300AF4C55 /* EditTextView.swift in Sources */,
 				94EEB11F2C1D9AAF00FBB856 /* Auth.swift in Sources */,
@@ -856,6 +889,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9463BCD82C1F4D180037A77F /* XCRemoteSwiftPackageReference "bcrypt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vapor/bcrypt.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+		9463BCD92C1F4E200037A77F /* XCRemoteSwiftPackageReference "vapor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vapor/vapor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.101.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9463BCDA2C1F4E200037A77F /* Vapor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9463BCD92C1F4E200037A77F /* XCRemoteSwiftPackageReference "vapor" */;
+			productName = Vapor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1DA0586B2C19C6E700AF4C55 /* Project object */;
 }
