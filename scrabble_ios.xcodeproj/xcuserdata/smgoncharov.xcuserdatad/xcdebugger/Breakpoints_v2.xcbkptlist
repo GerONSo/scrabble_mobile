@@ -7,373 +7,96 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3A3E66C6-565C-4B25-8966-C639AA357295"
+            uuid = "93AE46D0-6E90-4640-B5D8-D35CFCE36FE3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "scrabble_ios/room/viewmodel/RoomViewModel.swift"
+            filePath = "scrabble_ios/game/model/GameViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "leaveRoom(switchTab:)"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "scoreBoard()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "533D189F-BE90-49D3-96D7-A4E2C1A83B62"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "scrabble_ios/game/model/GameViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "scoreBoard()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "3A3E66C6-565C-4B25-8966-C639AA357295 - 76324c49e1cc0d77"
+                  uuid = "533D189F-BE90-49D3-96D7-A4E2C1A83B62 - 22901079a5dda37c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "scrabble_ios.RoomViewModel.leaveRoom(switchTab: () -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (scrabble_ios.Result&lt;scrabble_ios.ScoreModelResponse&gt;) -&gt; () in scrabble_ios.GameViewModel.scoreBoard() -&gt; ()"
                   moduleName = "scrabble_ios"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/room/viewmodel/RoomViewModel.swift"
+                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/game/model/GameViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "808">
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "80">
                </Location>
                <Location
-                  uuid = "3A3E66C6-565C-4B25-8966-C639AA357295 - 45edd46faa91138a"
+                  uuid = "533D189F-BE90-49D3-96D7-A4E2C1A83B62 - bb715ec2272b8fe3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable () -&gt; () in scrabble_ios.RoomViewModel.leaveRoom(switchTab: () -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (scrabble_ios.ScoreModel) -&gt; scrabble_ios.ScoreModel in closure #1 @Swift.MainActor () -&gt; () in closure #1 (scrabble_ios.Result&lt;scrabble_ios.ScoreModelResponse&gt;) -&gt; () in scrabble_ios.GameViewModel.scoreBoard() -&gt; ()"
                   moduleName = "scrabble_ios"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/room/viewmodel/RoomViewModel.swift"
+                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/game/model/GameViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "84">
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "533D189F-BE90-49D3-96D7-A4E2C1A83B62 - bb715ec2272b8fe3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (scrabble_ios.ScoreModel) -&gt; scrabble_ios.ScoreModel in closure #1 @Swift.MainActor () -&gt; () in closure #1 (scrabble_ios.Result&lt;scrabble_ios.ScoreModelResponse&gt;) -&gt; () in scrabble_ios.GameViewModel.scoreBoard() -&gt; ()"
+                  moduleName = "scrabble_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/game/model/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "533D189F-BE90-49D3-96D7-A4E2C1A83B62 - a0500276202f0861"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (scrabble_ios.ScoreModel) -&gt; scrabble_ios.ScoreItem in closure #1 @Swift.MainActor () -&gt; () in closure #1 (scrabble_ios.Result&lt;scrabble_ios.ScoreModelResponse&gt;) -&gt; () in scrabble_ios.GameViewModel.scoreBoard() -&gt; ()"
+                  moduleName = "scrabble_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/game/model/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "116">
                </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7440718D-98B7-4CEF-B2CC-98CF73ABFF64"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "scrabble_ios/room/viewmodel/RoomViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "leaveRoom(switchTab:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7440718D-98B7-4CEF-B2CC-98CF73ABFF64 - f04fef0502d91c91"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (scrabble_ios.Result&lt;scrabble_ios.DefaultResponse&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in scrabble_ios.RoomViewModel.leaveRoom(switchTab: () -&gt; ()) -&gt; ()"
-                  moduleName = "scrabble_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/room/viewmodel/RoomViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "360">
-               </Location>
-               <Location
-                  uuid = "7440718D-98B7-4CEF-B2CC-98CF73ABFF64 - f04fef0502d91c91"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (scrabble_ios.Result&lt;scrabble_ios.DefaultResponse&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in scrabble_ios.RoomViewModel.leaveRoom(switchTab: () -&gt; ()) -&gt; ()"
-                  moduleName = "scrabble_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/room/viewmodel/RoomViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "284">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6DD0CA1F-4633-4D77-BDA6-FA56E9284B6F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "scrabble_ios/room/viewmodel/RoomViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "leaveRoom(switchTab:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6DD0CA1F-4633-4D77-BDA6-FA56E9284B6F - c78cd44d4a578813"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (scrabble_ios.Result&lt;scrabble_ios.DefaultResponse&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in scrabble_ios.RoomViewModel.leaveRoom(switchTab: () -&gt; ()) -&gt; ()"
-                  moduleName = "scrabble_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/room/viewmodel/RoomViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "1160">
-               </Location>
-               <Location
-                  uuid = "6DD0CA1F-4633-4D77-BDA6-FA56E9284B6F - c78cd44d4a578813"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (scrabble_ios.Result&lt;scrabble_ios.DefaultResponse&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in scrabble_ios.RoomViewModel.leaveRoom(switchTab: () -&gt; ()) -&gt; ()"
-                  moduleName = "scrabble_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/room/viewmodel/RoomViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
-                  offsetFromSymbolStart = "1092">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "93DE989F-C171-44CE-88F6-3C76D6D5ABF3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "scrabble_ios/room/viewmodel/RoomViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "leaveRoom(switchTab:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "93DE989F-C171-44CE-88F6-3C76D6D5ABF3 - f04fef0502d91cdf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (scrabble_ios.Result&lt;scrabble_ios.DefaultResponse&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in scrabble_ios.RoomViewModel.leaveRoom(switchTab: () -&gt; ()) -&gt; ()"
-                  moduleName = "scrabble_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/room/viewmodel/RoomViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "412">
-               </Location>
-               <Location
-                  uuid = "93DE989F-C171-44CE-88F6-3C76D6D5ABF3 - f04fef0502d91cdf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (scrabble_ios.Result&lt;scrabble_ios.DefaultResponse&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in scrabble_ios.RoomViewModel.leaveRoom(switchTab: () -&gt; ()) -&gt; ()"
-                  moduleName = "scrabble_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/room/viewmodel/RoomViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "336">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "32E8C4BA-36BD-4473-9607-F72071A80D4C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "scrabble_ios/rooms/view/JoinRoomsTab.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-<<<<<<< HEAD
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "00B9F470-12FF-4395-BE17-51EE00BD40AC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "scrabble_ios/authorization/AuthViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "login()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4DCB9DDC-1A77-4042-AB94-286DE0743434"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "scrabble_ios/authorization/AuthViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "login()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "07A8E16C-C96F-4B77-80C6-1E0D562C9CA0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "scrabble_ios/authorization/AuthViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "login()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5B184DD5-7F2C-4071-9E10-0C4ABADC3892"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "scrabble_ios/authorization/view/Auth.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E1E44D3E-45FE-4EAE-A8F6-9412EF91CED1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "scrabble_ios/authorization/AuthViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "login()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E1E44D3E-45FE-4EAE-A8F6-9412EF91CED1 - 4755abbb4c3f27c8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable () -&gt; () in scrabble_ios.AuthViewModel.login() -&gt; ()"
-                  moduleName = "scrabble_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/authorization/AuthViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "E1E44D3E-45FE-4EAE-A8F6-9412EF91CED1 - aac335de79b5ea53"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (scrabble_ios.Result&lt;scrabble_ios.LoginResponse&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in scrabble_ios.AuthViewModel.login() -&gt; ()"
-                  moduleName = "scrabble_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/authorization/AuthViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "400">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4B12B252-9A23-4444-8838-7DEBBE13E7C6"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "scrabble_ios/authorization/RegistrationViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "register()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4B12B252-9A23-4444-8838-7DEBBE13E7C6 - 32e7d7e3774b20b4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable () -&gt; () in scrabble_ios.RegistrationViewModel.register() -&gt; ()"
-                  moduleName = "scrabble_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/authorization/RegistrationViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "52">
-               </Location>
-               <Location
-                  uuid = "4B12B252-9A23-4444-8838-7DEBBE13E7C6 - 79e11cdd8cb95757"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (scrabble_ios.Result&lt;scrabble_ios.RegistrationResponse&gt;) -&gt; () in closure #1 @Sendable () -&gt; () in scrabble_ios.RegistrationViewModel.register() -&gt; ()"
-                  moduleName = "scrabble_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/authorization/RegistrationViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "316">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-=======
->>>>>>> Max_game_dev
    </Breakpoints>
 </Bucket>

@@ -15,7 +15,7 @@ struct GameView: View {
     @State private var unusedLetters: [LetterTile] = []
     @State var shouldShowScore: Bool = false
     
-    @ObservedObject private var gameModel: GameViewModel
+    private var gameModel: GameViewModel
     
     init() {
         gameModel = GameViewModel()
@@ -41,7 +41,7 @@ struct GameView: View {
                 Button(action: {
                     // Scoreboard action
                     shouldShowScore.toggle()
-                    gameModel.scoreBoard()
+                    
                 }) {
                     HStack {
                         Image(systemName: "list.number")
@@ -126,7 +126,7 @@ struct GameView: View {
                 .font(.title2)
                 .padding()
             VStack {
-                ForEach($gameModel.scores) { $userScore in
+                ForEach(gameModel.scores, id: \.self) { userScore in
                     HStack {
                         Text(userScore.name)
                             .font(.title3)

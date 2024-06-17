@@ -8,14 +8,18 @@
 import Foundation
 
 struct ScoreModelResponse: Decodable {
-    var scores: Array<ScoreModel>
+    var scoreboard: Array<ScoreModel>
 }
 
-struct ScoreModel: Decodable, Hashable {
+struct ScoreModel: Decodable {
     var name: String
     var score: String
 }
 
 struct ScoreRequest: Encodable {
     var roomId: String
+    
+    enum CodingKeys: String, CodingKey {
+        case roomId = "room_id"
+    }
 }

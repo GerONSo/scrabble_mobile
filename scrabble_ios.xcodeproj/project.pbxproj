@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09E3BABD2C1F1BF800BDD30F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3BABC2C1F1BF800BDD30F /* GameView.swift */; };
 		09E3BAC22C1F86ED00BDD30F /* TileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3BAC12C1F86ED00BDD30F /* TileModels.swift */; };
 		09E3BAC42C1F870400BDD30F /* TileViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3BAC32C1F870400BDD30F /* TileViews.swift */; };
 		09E3BAC62C1F89FA00BDD30F /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3BAC52C1F89FA00BDD30F /* PlayerModel.swift */; };
@@ -55,6 +54,8 @@
 		1DE98EE02C1FB4E5000FDE8E /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98EDF2C1FB4E5000FDE8E /* AccountView.swift */; };
 		1DE98EE22C1FB534000FDE8E /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98EE12C1FB534000FDE8E /* ProfileInteractor.swift */; };
 		1DE98EE42C1FB551000FDE8E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98EE32C1FB551000FDE8E /* ProfileViewModel.swift */; };
+		1DE98EEC2C1FC305000FDE8E /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98EEB2C1FC305000FDE8E /* GameView.swift */; };
+		1DE98EEE2C1FC92D000FDE8E /* ScoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE98EED2C1FC92D000FDE8E /* ScoreItem.swift */; };
 		941F113A2C1DBC8E002BB999 /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F11392C1DBC8E002BB999 /* UserInteractor.swift */; };
 		941F113C2C1DECCE002BB999 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113B2C1DECCE002BB999 /* AuthViewModel.swift */; };
 		941F113E2C1DEDAA002BB999 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113D2C1DEDAA002BB999 /* User.swift */; };
@@ -76,13 +77,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09E3BABC2C1F1BF800BDD30F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = SOURCE_ROOT; };
 		09E3BAC12C1F86ED00BDD30F /* TileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModels.swift; sourceTree = "<group>"; };
 		09E3BAC32C1F870400BDD30F /* TileViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TileViews.swift; path = scrabble_ios/game/model/TileViews.swift; sourceTree = SOURCE_ROOT; };
 		09E3BAC52C1F89FA00BDD30F /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		09E3BAC72C1F8A4E00BDD30F /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewModel.swift; path = scrabble_ios/game/model/GameViewModel.swift; sourceTree = SOURCE_ROOT; };
 		09E3BAC92C1F8CF100BDD30F /* GameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
-		1DA058732C19C6E700AF4C55 /* scrabble_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scrabble_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA058762C19C6E700AF4C55 /* scrabble_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrabble_iosApp.swift; sourceTree = "<group>"; };
 		1DA058782C19C6E700AF4C55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1DA0587A2C19C6E800AF4C55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,13 +120,15 @@
 		1DE98ED12C1F6BA3000FDE8E /* CreateRoomRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomRequest.swift; sourceTree = "<group>"; };
 		1DE98ED32C1F6BAD000FDE8E /* CreateRoomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomResponse.swift; sourceTree = "<group>"; };
 		1DE98ED52C1F8B80000FDE8E /* DeleteRoomRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteRoomRequest.swift; sourceTree = "<group>"; };
-		1DE98ED92C1FB400000FDE8E /* scrabble_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = scrabble_ios.app; path = "/Users/smgoncharov/scrabble_mobile/build/Debug-iphoneos/scrabble_ios.app"; sourceTree = "<absolute>"; };
-		1DE98EDA2C1FB400000FDE8E /* scrabble_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = scrabble_iosTests.xctest; path = "/Users/smgoncharov/scrabble_mobile/build/Debug-iphoneos/scrabble_iosTests.xctest"; sourceTree = "<absolute>"; };
-		1DE98EDB2C1FB400000FDE8E /* scrabble_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = scrabble_iosUITests.xctest; path = "/Users/smgoncharov/scrabble_mobile/build/Debug-iphoneos/scrabble_iosUITests.xctest"; sourceTree = "<absolute>"; };
 		1DE98EDC2C1FB451000FDE8E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1DE98EDF2C1FB4E5000FDE8E /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		1DE98EE12C1FB534000FDE8E /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
 		1DE98EE32C1FB551000FDE8E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		1DE98EE82C1FC2AF000FDE8E /* scrabble_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = scrabble_ios.app; path = "/Users/smgoncharov/scrabble_mobile/build/Debug-iphoneos/scrabble_ios.app"; sourceTree = "<absolute>"; };
+		1DE98EE92C1FC2AF000FDE8E /* scrabble_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = scrabble_iosTests.xctest; path = "/Users/smgoncharov/scrabble_mobile/build/Debug-iphoneos/scrabble_iosTests.xctest"; sourceTree = "<absolute>"; };
+		1DE98EEA2C1FC2AF000FDE8E /* scrabble_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = scrabble_iosUITests.xctest; path = "/Users/smgoncharov/scrabble_mobile/build/Debug-iphoneos/scrabble_iosUITests.xctest"; sourceTree = "<absolute>"; };
+		1DE98EEB2C1FC305000FDE8E /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = SOURCE_ROOT; };
+		1DE98EED2C1FC92D000FDE8E /* ScoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreItem.swift; sourceTree = SOURCE_ROOT; };
 		941F11392C1DBC8E002BB999 /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
 		941F113B2C1DECCE002BB999 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		941F113D2C1DEDAA002BB999 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -336,8 +337,8 @@
 		1DA058AC2C19C82600AF4C55 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				09E3BABC2C1F1BF800BDD30F /* GameView.swift */,
 				09E3BAC32C1F870400BDD30F /* TileViews.swift */,
+				1DE98EEB2C1FC305000FDE8E /* GameView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -346,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				09E3BAC72C1F8A4E00BDD30F /* GameViewModel.swift */,
+				1DE98EED2C1FC92D000FDE8E /* ScoreItem.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -434,7 +436,7 @@
 			);
 			name = scrabble_ios;
 			productName = scrabble_ios;
-			productReference = 1DE98ED92C1FB400000FDE8E /* scrabble_ios.app */;
+			productReference = 1DE98EE82C1FC2AF000FDE8E /* scrabble_ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1DA058822C19C6E800AF4C55 /* scrabble_iosTests */ = {
@@ -452,7 +454,7 @@
 			);
 			name = scrabble_iosTests;
 			productName = scrabble_iosTests;
-			productReference = 1DE98EDA2C1FB400000FDE8E /* scrabble_iosTests.xctest */;
+			productReference = 1DE98EE92C1FC2AF000FDE8E /* scrabble_iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		1DA0588C2C19C6E800AF4C55 /* scrabble_iosUITests */ = {
@@ -469,7 +471,7 @@
 			);
 			name = scrabble_iosUITests;
 			productName = scrabble_iosUITests;
-			productReference = 1DE98EDB2C1FB400000FDE8E /* scrabble_iosUITests.xctest */;
+			productReference = 1DE98EEA2C1FC2AF000FDE8E /* scrabble_iosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -584,9 +586,9 @@
 				1DE98EDD2C1FB451000FDE8E /* Extensions.swift in Sources */,
 				1DA058C82C19E38200AF4C55 /* GetRequest.swift in Sources */,
 				1DA058BB2C19CC4700AF4C55 /* RoomsViewModel.swift in Sources */,
-				09E3BABD2C1F1BF800BDD30F /* GameView.swift in Sources */,
 				1DA058D22C1C6C3D00AF4C55 /* RoomsScreen.swift in Sources */,
 				1DA058C22C19D50300AF4C55 /* BaseApi.swift in Sources */,
+				1DE98EEC2C1FC305000FDE8E /* GameView.swift in Sources */,
 				1DE98ED62C1F8B80000FDE8E /* DeleteRoomRequest.swift in Sources */,
 				941F113C2C1DECCE002BB999 /* AuthViewModel.swift in Sources */,
 				1DA058BF2C19CFF800AF4C55 /* RoomsInteractor.swift in Sources */,
@@ -599,6 +601,7 @@
 				09E3BAC62C1F89FA00BDD30F /* PlayerModel.swift in Sources */,
 				1DE98ED02C1F47C4000FDE8E /* DefaultResponse.swift in Sources */,
 				941F113E2C1DEDAA002BB999 /* User.swift in Sources */,
+				1DE98EEE2C1FC92D000FDE8E /* ScoreItem.swift in Sources */,
 				1DA058E82C1DF50D00AF4C55 /* UserItem.swift in Sources */,
 				09E3BAC42C1F870400BDD30F /* TileViews.swift in Sources */,
 				09E3BACA2C1F8CF100BDD30F /* GameInteractor.swift in Sources */,

@@ -15,7 +15,7 @@ enum GameState {
     case paused
 }
 
-final class GameViewModel {
+final class GameViewModel: ObservableObject {
     private var player: PlayerModel = PlayerModel(isAdmin: true)
     private var remainingLetters: Int = 0
     private var board: [[BoardTile]] = Array(repeating: Array(repeating: BoardTile(letter: nil, multiplier: .empty), count: 15), count: 15)
@@ -36,7 +36,7 @@ final class GameViewModel {
     private var roomId: String?
     private var userId: String?
     
-    var scores: [ScoreModel] = []
+    @Published var scores: [ScoreItem] = []
     
     private let logger = Logger()
     @AppStorage("log_status") var log_status: Bool = false
@@ -131,8 +131,8 @@ final class GameViewModel {
             switch (result) {
             case .success(let response):
                 DispatchQueue.main.async {
-                    self.scores = response.scores.map({ score in
-                        ScoreModel(name: score.name, score: score.score)
+                    self.scores = response.scoreboard.map({ score in
+                        ScoreItem(name: score.name, score: score.score)
                     })
                 }
             case .failure(let error):
