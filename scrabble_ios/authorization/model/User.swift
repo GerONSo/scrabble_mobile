@@ -6,7 +6,7 @@ struct User: Encodable {
 
 struct RegistrationResponse: Decodable {
     var id: String
-    var userid: String
+    var userId: String
     var password: String
     var login: String
 }
@@ -14,4 +14,5 @@ struct RegistrationResponse: Decodable {
 struct LoginResponse: Decodable {
     var userid: String
     var jwt: String
+    var login: String
 }

@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct CreateRoomTab: View {
-    @State private var isOn: Bool = false
+    @ObservedObject var viewModel: RoomsViewModel
+    @ObservedObject var mainViewModel: MainViewModel
+    
+    init(roomsViewModel: RoomsViewModel, mainViewModel: MainViewModel) {
+        self.viewModel = roomsViewModel
+        self.mainViewModel = mainViewModel
+    }
     
     var body: some View {
         VStack {
@@ -20,10 +26,10 @@ struct CreateRoomTab: View {
                     .padding([.leading], 30)
                 Spacer()
             }
-            EditTextView(placeholder: "Some name")
+            EditTextView(placeholder: "Some name", text: $viewModel.createRoomNameText)
                 .padding([.leading, .trailing], 25)
             HStack {
-                Toggle(isOn: self.$isOn) {
+                Toggle(isOn: $viewModel.isOn) {
                     Text("Make private")
                         .font(.title)
                         .bold()
@@ -33,7 +39,9 @@ struct CreateRoomTab: View {
                 .padding([.leading, .trailing], 30)
             }
             ButtonM(action: {
-                
+                viewModel.create {
+                    mainViewModel.selectedTab = 1
+                }
             }, text: "Create", width: UIScreen.main.bounds.size.width / 2)
             .padding([.top], 40)
         }
@@ -41,5 +49,5 @@ struct CreateRoomTab: View {
 }
 
 #Preview {
-    CreateRoomTab()
+    CreateRoomTab(roomsViewModel: RoomsViewModel(), mainViewModel: MainViewModel())
 }

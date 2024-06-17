@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "75D14D6E-67B5-4922-A626-08479EE8F629"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93AE46D0-6E90-4640-B5D8-D35CFCE36FE3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "scrabble_ios/game/model/GameViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "scoreBoard()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "533D189F-BE90-49D3-96D7-A4E2C1A83B62"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "scrabble_ios/game/model/GameViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "scoreBoard()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "533D189F-BE90-49D3-96D7-A4E2C1A83B62 - 22901079a5dda37c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (scrabble_ios.Result&lt;scrabble_ios.ScoreModelResponse&gt;) -&gt; () in scrabble_ios.GameViewModel.scoreBoard() -&gt; ()"
+                  moduleName = "scrabble_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/game/model/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "533D189F-BE90-49D3-96D7-A4E2C1A83B62 - bb715ec2272b8fe3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (scrabble_ios.ScoreModel) -&gt; scrabble_ios.ScoreModel in closure #1 @Swift.MainActor () -&gt; () in closure #1 (scrabble_ios.Result&lt;scrabble_ios.ScoreModelResponse&gt;) -&gt; () in scrabble_ios.GameViewModel.scoreBoard() -&gt; ()"
+                  moduleName = "scrabble_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/game/model/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "533D189F-BE90-49D3-96D7-A4E2C1A83B62 - bb715ec2272b8fe3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (scrabble_ios.ScoreModel) -&gt; scrabble_ios.ScoreModel in closure #1 @Swift.MainActor () -&gt; () in closure #1 (scrabble_ios.Result&lt;scrabble_ios.ScoreModelResponse&gt;) -&gt; () in scrabble_ios.GameViewModel.scoreBoard() -&gt; ()"
+                  moduleName = "scrabble_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/game/model/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "533D189F-BE90-49D3-96D7-A4E2C1A83B62 - a0500276202f0861"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (scrabble_ios.ScoreModel) -&gt; scrabble_ios.ScoreItem in closure #1 @Swift.MainActor () -&gt; () in closure #1 (scrabble_ios.Result&lt;scrabble_ios.ScoreModelResponse&gt;) -&gt; () in scrabble_ios.GameViewModel.scoreBoard() -&gt; ()"
+                  moduleName = "scrabble_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smgoncharov/scrabble_mobile/scrabble_ios/game/model/GameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "116">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

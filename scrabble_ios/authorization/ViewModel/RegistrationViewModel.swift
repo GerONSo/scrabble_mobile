@@ -2,23 +2,20 @@ import Foundation
 import OSLog
 import SwiftUI
 
-final class AuthViewModel: ObservableObject {
+final class RegistrationViewModel: ObservableObject {
     private let userInteractor = UserInteractor()
     private let logger = Logger()
     @Published var userLogin: String = ""
     @Published var userPassword: String = ""
-    @AppStorage("log_status") var log_status: Bool = false
+    @Published var registered: Bool = false
     
-    func login() {
+    func register() {
         DispatchQueue.global().async {
-            self.userInteractor.login(requestData: User(login: self.userLogin, password: self.userPassword), resultCompletion: { result in
+            self.userInteractor.auth(requestData: User(login: self.userLogin, password: self.userPassword), resultCompletion: { result in
                 switch (result) {
                 case .success(let response):
                     DispatchQueue.main.async {
-                        self.log_status = true
-                        UserDefaults.standard.set(response.jwt, forKey: "jwtUser")
-                        UserDefaults.standard.set(response.userid, forKey: "userid")
-                        UserDefaults.standard.set(response.login, forKey: "userLogin")
+                        self.registered = true
                     }
                 case .failure(let error):
                     self.logger.error("\(error)")
@@ -30,5 +27,6 @@ final class AuthViewModel: ObservableObject {
     func clearFields() {
         userLogin = ""
         userPassword = ""
+        registered = false
     }
 }
