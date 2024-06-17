@@ -29,7 +29,7 @@ struct ContentView: View {
                 .padding([.bottom], 20)
                 .tag(1)
             
-            Text("Account")
+            Account()
                 .tabItem {
                     Text("Account")
                     Image(systemName: "person.crop.circle")

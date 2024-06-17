@@ -6,7 +6,7 @@ struct User: Encodable {
 
 struct RegistrationResponse: Decodable {
     var id: String
-    var userid: String
+    var userId: String
     var password: String
     var login: String
 }

@@ -39,7 +39,7 @@ struct Auth: View {
                             .padding(.bottom)
                         Button(action: {
                             authViewModel.login()
-                            authViewModel.clearFields()
+//                            authViewModel.clearFields()
                         }, label: {
                             Text("Login")
                                 .foregroundStyle(.background)

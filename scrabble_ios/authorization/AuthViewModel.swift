@@ -18,6 +18,7 @@ final class AuthViewModel: ObservableObject {
                         self.log_status = true
                         UserDefaults.standard.set(response.jwt, forKey: "jwtUser")
                         UserDefaults.standard.set(response.userid, forKey: "userid")
+                        UserDefaults.standard.set(response.login, forKey: "userLogin")
                     }
                 case .failure(let error):
                     self.logger.error("\(error)")

@@ -37,6 +37,7 @@ final class RoomsViewModel: ObservableObject {
             })
         }
     }
+
     
     func join(roomId: String?, inviteCode: String?, switchTab: @escaping () -> Void) {
         let userId = UserDefaults.standard.string(forKey: "userid")!

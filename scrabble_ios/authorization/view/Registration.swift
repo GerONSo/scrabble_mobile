@@ -5,11 +5,11 @@ struct Registration: View {
     @State var password: String = ""
     @Environment(\.dismiss) var dismiss
     @State var showError: Bool = false
-    @ObservedObject var regViewModel: RegistrationViewModel = .init()
+    @ObservedObject var regViewModel = RegistrationViewModel()
     var body: some View {
         NavigationView {
             VStack(spacing: 150) {
-                Text ("Registeration")
+                Text ("Registration")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .lineLimit(3)

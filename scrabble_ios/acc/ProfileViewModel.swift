@@ -1,3 +1,10 @@
+//
+//  ProfileViewModel.swift
+//  scrabble_ios
+//
+//  Created by smgoncharov on 17.06.2024.
+//
+
 import Foundation
 import OSLog
 import SwiftUI
@@ -16,9 +23,10 @@ final class ProfileViewModel: ObservableObject {
                 case .success(let response):
                     DispatchQueue.main.async {
                         self.log_status = false
-                        UserDefaults.standard.set("", forKey: "jwtUser")
-                        UserDefaults.standard.set("", forKey: "userid")
-                        UserDefaults.standard.set("", forKey: "userLogin")
+                        UserDefaults.standard.set(nil, forKey: "jwtUser")
+                        UserDefaults.standard.set(nil, forKey: "userid")
+                        UserDefaults.standard.set(nil, forKey: "userLogin")
+                        UserDefaults.standard.set(nil, forKey: "currentRoomId")
                     }
                 case .failure(let error):
                     self.logger.error("\(error)")
