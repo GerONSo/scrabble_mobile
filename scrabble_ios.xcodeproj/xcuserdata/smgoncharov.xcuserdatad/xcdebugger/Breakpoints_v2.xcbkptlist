@@ -212,6 +212,7 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+<<<<<<< HEAD
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
@@ -372,5 +373,7 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+=======
+>>>>>>> Max_game_dev
    </Breakpoints>
 </Bucket>

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09E3BABD2C1F1BF800BDD30F /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3BABC2C1F1BF800BDD30F /* GameView.swift */; };
+		09E3BAC22C1F86ED00BDD30F /* TileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3BAC12C1F86ED00BDD30F /* TileModels.swift */; };
+		09E3BAC42C1F870400BDD30F /* TileViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3BAC32C1F870400BDD30F /* TileViews.swift */; };
+		09E3BAC62C1F89FA00BDD30F /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3BAC52C1F89FA00BDD30F /* PlayerModel.swift */; };
+		09E3BAC82C1F8A4E00BDD30F /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3BAC72C1F8A4E00BDD30F /* GameViewModel.swift */; };
+		09E3BACA2C1F8CF100BDD30F /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3BAC92C1F8CF100BDD30F /* GameInteractor.swift */; };
 		1DA058772C19C6E700AF4C55 /* scrabble_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058762C19C6E700AF4C55 /* scrabble_iosApp.swift */; };
 		1DA058792C19C6E700AF4C55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA058782C19C6E700AF4C55 /* ContentView.swift */; };
 		1DA0587B2C19C6E800AF4C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA0587A2C19C6E800AF4C55 /* Assets.xcassets */; };
@@ -53,6 +59,7 @@
 		941F113C2C1DECCE002BB999 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113B2C1DECCE002BB999 /* AuthViewModel.swift */; };
 		941F113E2C1DEDAA002BB999 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113D2C1DEDAA002BB999 /* User.swift */; };
 		941F11402C1E0C9A002BB999 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941F113F2C1E0C9A002BB999 /* RegistrationViewModel.swift */; };
+		9463BCDF2C1F9E220037A77F /* ScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463BCDE2C1F9E220037A77F /* ScoreModel.swift */; };
 		94EEB11F2C1D9AAF00FBB856 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EEB11E2C1D9AAF00FBB856 /* Auth.swift */; };
 		94EEB1222C1D9E3900FBB856 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EEB1212C1D9E3900FBB856 /* ViewExtensions.swift */; };
 		94EEB1242C1DA0A100FBB856 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EEB1232C1DA0A100FBB856 /* Registration.swift */; };
@@ -69,6 +76,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09E3BABC2C1F1BF800BDD30F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = SOURCE_ROOT; };
+		09E3BAC12C1F86ED00BDD30F /* TileModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileModels.swift; sourceTree = "<group>"; };
+		09E3BAC32C1F870400BDD30F /* TileViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TileViews.swift; path = scrabble_ios/game/model/TileViews.swift; sourceTree = SOURCE_ROOT; };
+		09E3BAC52C1F89FA00BDD30F /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		09E3BAC72C1F8A4E00BDD30F /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewModel.swift; path = scrabble_ios/game/model/GameViewModel.swift; sourceTree = SOURCE_ROOT; };
+		09E3BAC92C1F8CF100BDD30F /* GameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
+		1DA058732C19C6E700AF4C55 /* scrabble_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scrabble_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA058762C19C6E700AF4C55 /* scrabble_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrabble_iosApp.swift; sourceTree = "<group>"; };
 		1DA058782C19C6E700AF4C55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1DA0587A2C19C6E800AF4C55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +132,7 @@
 		941F113B2C1DECCE002BB999 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		941F113D2C1DEDAA002BB999 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		941F113F2C1E0C9A002BB999 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		9463BCDE2C1F9E220037A77F /* ScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreModel.swift; sourceTree = "<group>"; };
 		94EEB11E2C1D9AAF00FBB856 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		94EEB1212C1D9E3900FBB856 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		94EEB1232C1DA0A100FBB856 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
@@ -310,6 +325,10 @@
 		1DA058AB2C19C82100AF4C55 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				09E3BAC12C1F86ED00BDD30F /* TileModels.swift */,
+				09E3BAC52C1F89FA00BDD30F /* PlayerModel.swift */,
+				09E3BAC92C1F8CF100BDD30F /* GameInteractor.swift */,
+				9463BCDE2C1F9E220037A77F /* ScoreModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -317,6 +336,8 @@
 		1DA058AC2C19C82600AF4C55 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				09E3BABC2C1F1BF800BDD30F /* GameView.swift */,
+				09E3BAC32C1F870400BDD30F /* TileViews.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -324,6 +345,7 @@
 		1DA058AD2C19C82B00AF4C55 /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
+				09E3BAC72C1F8A4E00BDD30F /* GameViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -548,7 +570,10 @@
 				1DE98ECE2C1F479D000FDE8E /* JoinResponse.swift in Sources */,
 				1DE98EE22C1FB534000FDE8E /* ProfileInteractor.swift in Sources */,
 				1DE98EE02C1FB4E5000FDE8E /* AccountView.swift in Sources */,
+				9463BCDF2C1F9E220037A77F /* ScoreModel.swift in Sources */,
 				1DA058D42C1C6C8800AF4C55 /* RoomsItem.swift in Sources */,
+				09E3BAC22C1F86ED00BDD30F /* TileModels.swift in Sources */,
+				1DE98ED42C1F6BAD000FDE8E /* CreateRoomResponse.swift in Sources */,
 				941F11402C1E0C9A002BB999 /* RegistrationViewModel.swift in Sources */,
 				94EEB1222C1D9E3900FBB856 /* ViewExtensions.swift in Sources */,
 				1DE98ED42C1F6BAD000FDE8E /* CreateRoomResponse.swift in Sources */,
@@ -559,19 +584,24 @@
 				1DE98EDD2C1FB451000FDE8E /* Extensions.swift in Sources */,
 				1DA058C82C19E38200AF4C55 /* GetRequest.swift in Sources */,
 				1DA058BB2C19CC4700AF4C55 /* RoomsViewModel.swift in Sources */,
+				09E3BABD2C1F1BF800BDD30F /* GameView.swift in Sources */,
 				1DA058D22C1C6C3D00AF4C55 /* RoomsScreen.swift in Sources */,
 				1DA058C22C19D50300AF4C55 /* BaseApi.swift in Sources */,
 				1DE98ED62C1F8B80000FDE8E /* DeleteRoomRequest.swift in Sources */,
 				941F113C2C1DECCE002BB999 /* AuthViewModel.swift in Sources */,
 				1DA058BF2C19CFF800AF4C55 /* RoomsInteractor.swift in Sources */,
+				09E3BAC82C1F8A4E00BDD30F /* GameViewModel.swift in Sources */,
 				1DE98ECC2C1F4791000FDE8E /* JoinRequest.swift in Sources */,
 				1DA058CE2C1B6DF300AF4C55 /* EditTextView.swift in Sources */,
 				1DA058E82C1DF50D00AF4C55 /* UserItem.swift in Sources */,
 				1DA058E02C1DE55B00AF4C55 /* RoomViewModel.swift in Sources */,
 				94EEB11F2C1D9AAF00FBB856 /* Auth.swift in Sources */,
+				09E3BAC62C1F89FA00BDD30F /* PlayerModel.swift in Sources */,
 				1DE98ED02C1F47C4000FDE8E /* DefaultResponse.swift in Sources */,
 				941F113E2C1DEDAA002BB999 /* User.swift in Sources */,
 				1DA058E82C1DF50D00AF4C55 /* UserItem.swift in Sources */,
+				09E3BAC42C1F870400BDD30F /* TileViews.swift in Sources */,
+				09E3BACA2C1F8CF100BDD30F /* GameInteractor.swift in Sources */,
 				1DA058E02C1DE55B00AF4C55 /* RoomViewModel.swift in Sources */,
 				94EEB11F2C1D9AAF00FBB856 /* Auth.swift in Sources */,
 				941F113E2C1DEDAA002BB999 /* User.swift in Sources */,

@@ -16,6 +16,9 @@ final class RoomsViewModel: ObservableObject {
     @Published var inviteCodeText: String = ""
     @Published var createRoomNameText: String = ""
     @Published var isOn: Bool = false
+    @Published var inviteCodeText: String = ""
+    @Published var createRoomNameText: String = ""
+    @Published var isOn: Bool = false
     
     init() {
         getRooms()

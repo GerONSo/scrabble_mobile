@@ -13,6 +13,7 @@ struct RoomScreen: View {
     private var roomId: String?
     
     init(roomId: String?, mainViewModel: MainViewModel) {
+    init(roomId: String?, mainViewModel: MainViewModel) {
         self.viewModel = RoomViewModel(roomId: roomId)
         self.mainViewModel = mainViewModel
         self.roomId = roomId

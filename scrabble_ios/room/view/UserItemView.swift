@@ -40,7 +40,19 @@ struct UserItemView: View {
                         }
                 }
                 
+                if (self.userId != self.adminUserId && userItem.description == "admin") {
+                    Text(self.userItem.description)
+                        .fontWeight(.thin)
+                } else if (self.userId == self.adminUserId) {
+                    Text(self.userItem.description)
+                        .fontWeight(.thin)
+                        .onTapGesture {
+                            wasClicked = !wasClicked
+                        }
+                }
+                
             }.padding([.horizontal], 30)
+            if (wasClicked && self.userItem.description != "admin" && self.userId == self.adminUserId) {
             if (wasClicked && self.userItem.description != "admin" && self.userId == self.adminUserId) {
                 HStack {
                     Spacer()
@@ -59,6 +71,9 @@ struct UserItemView: View {
     }
 }
 
+//#Preview {
+//    UserItemView(userItem: UserItem(id: UUID().uuidString, name: "username", description: "admin"), adminUserId: "")
+//}
 //#Preview {
 //    UserItemView(userItem: UserItem(id: UUID().uuidString, name: "username", description: "admin"), adminUserId: "")
 //}

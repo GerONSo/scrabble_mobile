@@ -12,15 +12,22 @@ final class RoomViewModel: ObservableObject {
     private let roomInteractor = RoomInteractor()
     private let logger = Logger()
     private var roomId: String?
+    private var roomId: String?
     
     @Published var roomName: String
     @Published var users: Array<UserItem>
     @Published var adminUserId: String
+    @Published var adminUserId: String
     
+    init(roomId: String?) {
     init(roomId: String?) {
         roomName = "Untitled room"
         adminUserId = ""
+        adminUserId = ""
         users = Array()
+        self.roomId = roomId
+
+        getRoom()
         self.roomId = roomId
 
         getRoom()
@@ -30,11 +37,17 @@ final class RoomViewModel: ObservableObject {
         guard roomId != nil else {
             return
         }
+    func getRoom() {
+        guard roomId != nil else {
+            return
+        }
         DispatchQueue.global(qos: .userInitiated).async {
+            self.roomInteractor.getRoom(roomId: self.roomId!, resultCompletion: { result in
             self.roomInteractor.getRoom(roomId: self.roomId!, resultCompletion: { result in
                 switch (result) {
                 case .success(let response):
                     DispatchQueue.main.async {
+                        self.adminUserId = response.adminUserId
                         self.adminUserId = response.adminUserId
                         self.roomName = response.roomName
                         self.users = response.users.map { user in
